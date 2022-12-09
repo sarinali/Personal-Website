@@ -1,37 +1,54 @@
-import First from '../assets/home_assets/1.JPG';
-import Second from '../assets/home_assets/2.JPG'
-import Third from '../assets/home_assets/3.JPG'
-import Fourth from '../assets/home_assets/4.JPG'
-import Fifth from '../assets/home_assets/5.JPG'
-import Sixth from '../assets/home_assets/6.JPG'
-import Seventh from '../assets/home_assets/7.JPG'
-import Eighth from '../assets/home_assets/8.JPG'
-import Ninth from '../assets/home_assets/9.JPG'
-import Tenth from '../assets/home_assets/10.JPG'
-import Eleventh from '../assets/home_assets/11.JPG'
-import ImageBundle from '../ImageBundle'
-
+import MediaContainer from "../components/MediaContainer";
 
 
 function Home() {
-    let componentList = [
-        new ImageBundle(First, 1, '一'),
-        new ImageBundle(Second, 2, '二'),
-        new ImageBundle(Third, 3, '三'),
-        new ImageBundle(Fourth, 4, '四'),
-        new ImageBundle(Fifth, 5, '五'),
-        new ImageBundle(Sixth, 6, '六'),
-        new ImageBundle(Seventh, 7, '七'),
-        new ImageBundle(Eighth, 8, '八'),
-        new ImageBundle(Ninth, 9, '九'),
-        new ImageBundle(Tenth, 10, '十'),
-        new ImageBundle(Eleventh, 11, '十一'),
-    ];
+    
+    
+    // const BackGroundImageDiv = styled.div`
+    //     background-image: url('../assets/home_assets/1.JPG');
+    //     height: 500px;
+    //     width: 500px;
+    // `;
 
-    let index = Math.floor(Math.random() * 11) + 1;
     return (
-        <div>
-            {/* <img src={componentList[index].component}></img> */}
+        <div className='home-body'>
+            <div className='media-wrapper'>
+            <div className="media">
+                <MediaContainer></MediaContainer>
+            </div>
+                <div className='disclaimer'>*images not drawn by me!!</div>
+            </div>
+            <div className='home-text'>
+                <div className='page-index'>| 01</div>
+                <div className="welcome">Welcome Home.</div>
+                <div className="line-container">
+                    <hr className="line"></hr>
+                </div>
+                <div className="paragraph-item">
+                    My name is Sarina Li! 
+                </div>
+                <div className="paragraph-item">
+                    I am a student @
+                    <b> UofT CS. </b>
+                     Welcome to 
+                     <b> sarinali.me</b>
+                     , I hope you enjoy your stay here! 
+                </div>
+                <div className="paragraph-item">
+                I like sketching, cs, lifting, cooking, fashion, music and sleeping. I’m working hard to attend more hackathons, get an internship, obtain a 4.0, squat 225lbs, finish my side projects, cook more and online shop. 
+                </div>
+                <div className="paragraph-item">
+                <b>What I would DIE for rn: </b>
+                     Attend SIGGRAPH 2023!!!!
+                </div>
+                <div className="paragraph-item">
+                <b>Biggest Goal in the Entire World: </b>
+                     Work at Apple!!!!! And bench 135lbs
+                </div>
+                <div className="paragraph-item">
+                    Nice having you here, feel free to explore my site! 
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,48 @@
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar {
+    display: flex;
+}
+
+.logo-container{
+    background-color: #CDB297;
+    border-radius: 6px;
+    padding: 6px;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: #7F0019;
+}
+
+.chinese-name {
+    font-size: 24px;
+}
+
+.topbar-item-container {
+    /* margin-top: 42px;
+    margin-right: 50px;
+    margin-bottom: 12px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    border-bottom: 1px solid black;
+}
+
+.topbar-item-container:hover {
+    border-bottom: 1px solid #7F0019;
+}
+
+.topbar-item {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.2s;
+}
+
+.topbar-item:hover {
+    color: #7F0019;
+}

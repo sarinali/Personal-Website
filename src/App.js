@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import TopBar from './components/TopBar';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
@@ -14,25 +14,16 @@ function App() {
     <Router>
       <div className="App">
         <TopBar></TopBar>
-        <Switch>
-            <Route exact path='/'>
-              <Home></Home>
-            </Route>
-            <Route exact path='/aboutme'>
-              <AboutMe></AboutMe>
-            </Route>
-            <Route exact path='/experience'>
-              <Experience></Experience>
-            </Route>
-            <Route exact path='/projects'>
-              <Projects></Projects>
-            </Route>
-            <Route exact path='/contact'>
-              <ContactMe></ContactMe>
-            </Route>
-        </Switch>
-      </div>
+        {/* <Link to="/aboutme">About</Link> */}
+        <Routes>
+            <Route exact path="/" element={<Home></Home>}></Route>
+            <Route exact path="/aboutme" element={<AboutMe></AboutMe>}></Route>
+            <Route exact path="/experience" element={<Experience></Experience>}></Route>
+            <Route exact path="/projects" element={<Projects></Projects>}></Route>
+            <Route exact path="/contact" element={<ContactMe></ContactMe>}></Route>
+        </Routes>
 
+      </div>
     </Router>
   );
 }
