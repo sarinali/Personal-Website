@@ -158,7 +158,10 @@
     }
 
     .home-body {
-        margin-top: 50px;
+        padding: 50px;
+        /* margin-left: 50px;
+        margin-right: 50px; */
+        /* margin-top: 50px; */
         display: inline-block;
         justify-content: center;
     }
@@ -169,12 +172,30 @@
 
     .paragraph-item {
         margin-left: 0;
-        width: 350px;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+        width: 100%;
     }
 
     .line {
-        width: 350px;
+        width: 100%;
     }
 
-    
+    .image {
+        height: 50vh;
+    }
+
+    .media-parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-label {
+        width: 75%;
+    }
+
+    .separator {
+        width: 80%;
+    }
 }

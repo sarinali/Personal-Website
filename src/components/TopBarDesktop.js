@@ -14,14 +14,14 @@ function TopBarDesktop() {
                     <Link to="/" className="topbar-item">Home</Link>
                 </div>
                 <div className='topbar-item-container'>
-                    <Link to="/aboutme" className="topbar-item">About Me</Link>
-                </div>
-                <div className='topbar-item-container'>
-                    <Link to="/experience" className="topbar-item">Experience</Link>
-                </div>
-                <div className='topbar-item-container'>
                     <Link to="/projects" className="topbar-item">Projects</Link>
                 </div>
+                <div className='topbar-item-container'>
+                    <Link to="/aboutme" className="topbar-item">About Me</Link>
+                </div>
+                {/* <div className='topbar-item-container'>
+                    <Link to="/experience" className="topbar-item">Experience</Link>
+                </div> */}
                 <div className='topbar-item-container'>
                     <Link to="/contact" className="topbar-item">Contact Me</Link>
                 </div>

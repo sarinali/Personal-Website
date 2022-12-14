@@ -1,0 +1,15 @@
+.aboutme-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+@media (max-width: 760px) {
+    .aboutme-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

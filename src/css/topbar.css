@@ -46,3 +46,45 @@
 .topbar-item:hover {
     color: #7F0019;
 }
+
+.page-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-information {
+    width: 50%;
+}
+
+.page-description {
+    width: 50%;
+}
+
+@media (max-width: 760px) {
+    /* .page-header-parent {
+        margin-left: 50px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 100%;
+    } */
+    .page-header-container {
+        display: block;
+    }
+
+    .page-header-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-left: 50px;
+    }
+    .page-information {
+        width: 100%;
+    }
+    .page-description {
+        width: 100%;
+    }
+
+}

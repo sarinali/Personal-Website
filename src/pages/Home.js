@@ -13,10 +13,13 @@ function Home() {
     return (
         <div className='home-body'>
             <div className='media-wrapper'>
-            <div className="media">
-                <MediaContainer></MediaContainer>
-            </div>
-                <div className='disclaimer'>*images not drawn by me!!</div>
+                <div className="media-parent">
+                    <div className="media">
+                        <MediaContainer></MediaContainer>
+                    </div>
+
+                </div>
+                    <div className='disclaimer'>*images not drawn by me!!</div>
             </div>
             <div className='home-text'>
                 <div className='page-index'>| 01</div>
@@ -35,7 +38,7 @@ function Home() {
                      , I hope you enjoy your stay here! 
                 </div>
                 <div className="paragraph-item">
-                I like sketching, cs, lifting, cooking, fashion, music and sleeping. I’m working hard to attend more hackathons, get an internship, obtain a 4.0, squat 225lbs, finish my side projects, cook more and online shop. 
+                I like cs, lifting, cooking, fashion, music and sleeping. I’m working hard to attend more hackathons, get an internship, obtain a 4.0, squat 225lbs, finish my side projects, cook more and online shop. 
                 </div>
                 <div className="paragraph-item">
                 <b>What I would DIE for rn: </b>
