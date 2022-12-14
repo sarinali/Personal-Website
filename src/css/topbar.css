@@ -32,8 +32,12 @@
     border-bottom: 1px solid black;
 }
 
-.topbar-item-container:hover {
+.topbar-item-container:hover  {
     border-bottom: 1px solid #7F0019;
+    /* color: #7F0019; */
+}
+.topbar-item-container:hover .topbar-item {
+    color: #7F0019;
 }
 
 .topbar-item {
@@ -43,9 +47,9 @@
     transition: 0.2s;
 }
 
-.topbar-item:hover {
+/* .topbar-item:hover {
     color: #7F0019;
-}
+} */
 
 .page-header-container {
     width: 100%;
@@ -55,10 +59,47 @@
 
 .page-information {
     width: 50%;
+    padding-top: 30px;
+    
 }
 
 .page-description {
     width: 50%;
+    padding: 30px;
+    text-align: left;
+}
+
+.page-index-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #7F0019;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 60px;
+}
+
+.page-name {
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 60px;
+}
+
+.page-header-parent {
+    width: 100%;
+    display: block;
+}
+
+.aboutme-line {
+    width: 100%;
+    padding: 0;
+    border: 0.5px solid #7F0019;
+}
+
+.aboutme-texts {
+    margin-top: 12px;
+    font-size: 20px;
 }
 
 @media (max-width: 760px) {
@@ -74,17 +115,36 @@
     }
 
     .page-header-wrapper {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         justify-content: right;
         align-items: center;
         padding-left: 50px;
     }
     .page-information {
+        margin-top: 60px;
         width: 100%;
+        padding: 0;
+        text-align: left;
     }
     .page-description {
         width: 100%;
+        margin-left: 60px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .page-index-display {
+        font-size: 30px;
+    }
+
+    .page-name {
+        font-size: 42px;
+    }
+
+    .aboutme-line {
+        width: 100%;
+        
     }
 
 }

@@ -11,7 +11,6 @@ import Tenth from '../assets/home_assets/10.JPG'
 // import Eleventh from '../assets/home_assets/11.JPG'
 import ImageBundle from '../ImageBundle'
 import '../css/home.css';
-import styled from "styled-components";
 
 function MediaContainer() {
     let componentList = [

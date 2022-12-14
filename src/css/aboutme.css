@@ -6,10 +6,94 @@
 }
 
 
+.aboutme-container {
+    width: 100%;
+}
+
+.media-container {
+    display: flex;
+}
+
+.image-media {
+    position: relative;
+    display: block;
+}
+
+.image {
+    /* height: 400px; */
+    /* display: grid;
+    grid-template-columns: 20vw 20vw; */
+    width: 20vw;
+    height: auto;
+    /* grid-row: auto auto; */
+    /* margin-left: 12px; */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+}
+
+.chinese-caption {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 12px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #7F0019;
+    text-align: left;
+}
+
+.media-body {
+    display: flex;
+}
+
+.caption {
+    position: absolute;
+    bottom: 12px;
+    left: 24px;
+    color: #7F0019;
+    font-size: 24px;
+}
+
+.title {
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #7F0019;
+}
+
 @media (max-width: 760px) {
+
+    .media-body {
+        display: block;
+    }
     .aboutme-container{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    .image {
+        width: 150px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+
+    .chinese-caption {
+        letter-spacing: 6px;
+        font-size: 20px;
+    }
 }
+

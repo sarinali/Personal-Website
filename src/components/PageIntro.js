@@ -3,17 +3,27 @@ import '../css/topbar.css'
 function PageIntro({pageName, displayIndex, displayText}) {
 
     const displayTexts = displayText.map((text) =>
-        <div>{text}</div>
+        <div className='aboutme-texts'>
+        {text}
+        </div>
+        
     );
     return (
         <div className='page-header-parent'>
             
             <div className='page-header-container'>
                 <div className='page-information'>
-                    <div className='page-index-display'>{displayIndex}</div>
-                    <div className='page-name'>{pageName}</div>
+                    <div className='page-index-display'>
+                        <div>{displayIndex}</div>
+                    </div>
+                    <div className='page-name'>
+                        <div>{pageName}</div>
+                    </div>
+                    <hr className='aboutme-line'></hr>
                 </div>
-                <div className='page-description'>{displayTexts}</div>
+                <div className='page-description'>
+                    <div>{displayTexts}</div>
+                </div>
             </div>
         
         </div>
