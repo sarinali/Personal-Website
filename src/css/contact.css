@@ -1,0 +1,175 @@
+.contact-body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.socials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+    /* height: 100%; */
+    /* position: absolute; */
+    height: calc(100% - 300px);
+}
+
+.socials-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-container {
+    width: 20vw;
+    height: 50vh;
+    background-color: #7F0019;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.instagram-container:hover .ig {
+    opacity: 50%;
+}
+
+.instagram-container:hover {
+    background-color: #4A000F;
+}
+
+.resume-container {
+    width: 20vw;
+    height: 50vh;
+    background-color: #BFA58A;
+    margin-left: 20px;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.resume-container:hover {
+    background-color: #7C6B5A;
+}
+
+.resume-container:hover .resume {
+    opacity: 50%;
+}
+
+.linkedin-container{
+    width: 20vw;
+    height: 50vh;
+    background-color: #F7F8EA;
+    margin-left: 20px;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.ig {
+    width: 5vw;
+    height: auto;
+    transition: 0.2s;
+}
+
+.linkedin {
+    width: 5vw;
+    height: auto;
+    transition: 0.2s;
+}
+
+.ig-handle {
+    position: absolute;
+    bottom: 36px;
+    left: 12px;
+    color: white;
+}
+
+.ig-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.linkedin-handle {
+    position: absolute;
+    bottom: 36px;
+    left: 12px;
+    color: black;
+}
+
+.linkedin-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.resume {
+    width: 5vw;
+    height: auto;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.linkedin-container:hover {
+    background-color: #C9CABF;
+}
+
+.linkedin-container:hover .linkedin {
+    opacity: 50%;
+}
+
+@media (max-width: 760px) {
+
+    
+    .socials-display {
+        display: block;
+        margin-left: 60px;
+    }
+
+    .instagram-container {
+        margin-top: 20px;
+        width: 80vw;
+        height: 20vh;
+        border-radius: 20px;
+    }
+    .resume-container {
+        width: 80vw;
+        height: 20vh;
+        margin-left: 0;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    .linkedin-container {
+        width: 80vw;
+        height: 20vh;
+        margin-left: 0;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+
+    .ig {
+        width: 60px;
+    }
+
+    .resume {
+        width: 60px;
+    }
+
+    .linkedin {
+        width: 60px;
+    }
+}
