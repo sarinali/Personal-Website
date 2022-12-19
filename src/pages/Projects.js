@@ -27,20 +27,20 @@ function Projects() {
             ],
             [Flutter, GMap]
         ),
-        new ProjectBundle(
-            UFound, 
-            'UFound', 
-            '2022', 
-            '1',
-            [new ProjectButton(
-                'https://github.com/sarinali/uoft-lost-and-found', 
-                'GitHub'),
-            new ProjectButton(
-                'https://devpost.com/software/ufound',
-                'Devpost'),
-            ],
-            [ReactJS, Firebase]
-        ),
+        // new ProjectBundle(
+        //     UFound, 
+        //     'UFound', 
+        //     '2022', 
+        //     '1',
+        //     [new ProjectButton(
+        //         'https://github.com/sarinali/uoft-lost-and-found', 
+        //         'GitHub'),
+        //     new ProjectButton(
+        //         'https://devpost.com/software/ufound',
+        //         'Devpost'),
+        //     ],
+        //     [ReactJS, Firebase]
+        // ),
     ]
     return (
         <div className="project-body">
@@ -52,7 +52,14 @@ function Projects() {
             <div>
                 {projects.map((project) => {
                     return (
-                        <ProjectContainer sourceImage={project.image} projectName={project.title} projectIndex={project.index} projectDate={project.date} buttonList={project.buttonList} techList={project.techList}></ProjectContainer>
+                        <ProjectContainer 
+                        sourceImage={project.image} 
+                        projectName={project.title} 
+                        projectIndex={project.index} 
+                        projectDate={project.date} 
+                        buttonList={project.buttonList} 
+                        techList={project.techList} 
+                        background='linear-gradient(354deg, #DAEDF0 10.68%, #EFEECF 96.49%);'></ProjectContainer>
                     )
                 })}
             </div>

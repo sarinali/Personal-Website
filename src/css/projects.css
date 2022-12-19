@@ -1,26 +1,14 @@
 .projectcontainer-wrapper {
     height: 400px;
     width: 100%;
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.poop {
-    display: inline-block;
-}
-
 .project-image-container{
     position: relative;
-}
-
-.project-image {
-    width: auto;
-    height: 200px;
-    /* position: absolute; */
-    display: inline-block;
 }
 
 .image-hover {
@@ -29,15 +17,22 @@
     width: inherit;
     height: 200px;
 }
-.container {
+.projectimage-container {
     display: grid;
   }
   
-.content, .overlay {
+.project-image, .overlay {
     grid-area: 1 / 1;
+    transition: 0.2s;
+    border-radius: 15px;
     /* background-color: black; */
     /* opacity: 0.5; */
 }
+
+.project-source-image {
+    border-radius: 15px;
+}
+
 
 .overlay {
     opacity: 0;
@@ -48,4 +43,22 @@
 
 .overlay:hover {
     opacity: 1;
+}
+
+.project-line {
+    border: 0.5px solid #7F0019;
+    width: 100%;
+    position: absolute;
+    bottom: 100px
+}
+
+@media (max-width: 760px) {
+    .project-source-image {
+        width: 80%;
+        height: auto;
+    }
+    .project-image, .overlay {
+        /* margin-left: 20%;
+        margin-right: 20%; */
+    }
 }

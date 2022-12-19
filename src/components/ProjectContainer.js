@@ -1,8 +1,24 @@
 import '../css/projects.css'
+import styled from 'styled-components'
 
-function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, buttonList, techList}) {
+function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, buttonList, techList, background}) {
+    const Wrapper = styled.div`
+        height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: ${background}
+
+        @media (max-width: 760px) {
+            display: block
+        }
+
+    `
+
     return (
-        <div className="projectcontainer-wrapper">
+        <Wrapper>
             {/* <div className='poop'>
                 <div className='project-image-container'>
 
@@ -11,13 +27,14 @@ function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, 
                     <div className='image-hover'></div>
 
             </div> */}
-            <div class="container">
-                <div class="content">
-                    <img src={sourceImage} width='auto' height='200px'></img>
+            <div class="projectimage-container">
+                <div class="project-image">
+                    <img src={sourceImage} width='auto' height='250px' alt='' className='project-source-image'></img>
                 </div>
                 <div class="overlay">
                     <div>as,dkfjalskdfjlasdkjf</div>
                 </div>
+                <hr className='project-line'></hr>
             </div>
             <div className='project-details-wrapper'>
                 <div className='project-name'>{projectName}</div>
@@ -45,7 +62,7 @@ function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, 
                         })}
                 </div>
             </div>
-        </div>
+        </Wrapper>
     )
 }
 

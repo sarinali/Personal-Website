@@ -85,7 +85,8 @@
     color: #7F0019;
     display: flex;
     align-items: flex-start;
-    padding-left: 60px;
+    /* padding-left: 60px; */
+    margin-left: 30px;
 }
 
 .page-name {
@@ -93,7 +94,8 @@
     font-weight: bold;
     display: flex;
     align-items: flex-start;
-    padding-left: 60px;
+    /* padding-left: 60px; */
+    margin-left: 30px;
 }
 
 .page-header-parent {
@@ -138,10 +140,12 @@
         text-align: left;
     }
     .page-description {
-        width: 100%;
-        margin-left: 60px;
+        width: 90%;
+        /* margin-left: 60px; */
         padding: 0;
         text-align: left;
+        margin-left: 30px;
+        /* margin-right: 30px; */
     }
 
     .page-index-display {
