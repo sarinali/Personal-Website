@@ -52,6 +52,7 @@ function Home() {
                     Nice having you here, feel free to explore my site! 
                 </div>
             </div>
+            
         </div>
     )
 }

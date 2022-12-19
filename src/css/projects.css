@@ -1,0 +1,51 @@
+.projectcontainer-wrapper {
+    height: 400px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.poop {
+    display: inline-block;
+}
+
+.project-image-container{
+    position: relative;
+}
+
+.project-image {
+    width: auto;
+    height: 200px;
+    /* position: absolute; */
+    display: inline-block;
+}
+
+.image-hover {
+    background-color: black;
+    position: absolute;
+    width: inherit;
+    height: 200px;
+}
+.container {
+    display: grid;
+  }
+  
+.content, .overlay {
+    grid-area: 1 / 1;
+    /* background-color: black; */
+    /* opacity: 0.5; */
+}
+
+.overlay {
+    opacity: 0;
+    background-color: black;
+    color: white;
+}
+
+
+.overlay:hover {
+    opacity: 1;
+}

@@ -1,10 +1,12 @@
 .topbar-container {
     display: flex;
     justify-content: space-between;
+    /* position: fixed; */
 }
 
 .topbar {
     display: flex;
+    /* position: fixed; */
 }
 
 .logo-container{
@@ -15,6 +17,14 @@
     margin-left: 30px;
     font-weight: bold;
     color: #7F0019;
+    transition: 0.2s;
+}
+
+.logo-container:hover {
+    scale: 1.1;
+    background-color: #8e7b67;
+    color: white;
+    box-shadow: 10px 5px 5px rgb(139, 139, 139);
 }
 
 .chinese-name {
