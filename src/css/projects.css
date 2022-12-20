@@ -48,12 +48,20 @@
 
 
 .overlay:hover {
+    opacity: 0.75;
+}
+
+#a:hover + #b {
+    opacity: 0;
+}
+
+.overlay:hover .project-description {
     opacity: 1;
 }
 
 .project-line {
     border: 0.5px solid #7F0019;
-    width: 80%;
+    width: 50%;
     position: absolute;
     bottom: 100px;
     left: 0;
@@ -69,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 350px;
 }
 
 .project-detail {
@@ -99,10 +107,11 @@
 .project-title-display {
     position: absolute;
     bottom: 130px;
-    left: 30px;
+    left: 90px;
     font-size: 36px;
     font-weight: bold;
-    color: #7F0019;
+    color: #ba0025;
+    transition: 0.2s;
 }
 
 .project-line-container {
@@ -110,6 +119,64 @@
     align-items: flex-start;
     justify-content: start;
 }
+
+.project-tech {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.project-buttons {
+    display: flex;
+    margin-left: 24px;
+}
+
+
+.project-button-container {
+    display: flex;
+    /* background-color: #7F0019; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.individ-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    background-color: #7F0019;
+    width: 120px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.project-button-title {
+    color: #CDB297;
+    font-weight: bold;
+}
+
+.project-button-text {
+    color: #CDB297;
+}
+
+.individ-button:hover {
+    background-color: #4d000f;
+    scale: 1.05;
+    /* color: white; */
+}
+
+.individ-button:hover .project-button-title {
+    color: white;
+}
+
+.individ-tech {
+    margin-top: 30px;
+    margin-left: 24px;
+}
+
 
 @media (max-width: 760px) {
     .project-source-image {

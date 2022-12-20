@@ -12,7 +12,7 @@ export default class ProjectButton {
         } else if (buttonType === 'Devpost') {
             this.buttonText = 'View on DP';
         } else if (buttonType === 'Web') {
-            this.buttonText = 'Open in browser';
+            this.buttonText = 'Open in Web';
         }
     }
 }

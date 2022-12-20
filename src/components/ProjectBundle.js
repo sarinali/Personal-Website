@@ -1,5 +1,5 @@
 export default class ProjectBundle {
-    constructor(imageComponent, projectTitle, projectDate, projectIndex, projectButtonList, projectTechList, projectDesciption) {  // Constructor
+    constructor(imageComponent, projectTitle, projectDate, projectIndex, projectButtonList, projectTechList, projectDesciption, isDark, projectBackground, width) {  // Constructor
       this.image = imageComponent;
       this.title = projectTitle;
       this.date = projectDate;
@@ -7,5 +7,8 @@ export default class ProjectBundle {
       this.buttonList = projectButtonList;
       this.techList = projectTechList;
       this.description = projectDesciption;
+      this.dark = isDark;
+      this.background = projectBackground;
+      this.textWidth = width;
     }
 }
