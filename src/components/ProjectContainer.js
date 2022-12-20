@@ -1,7 +1,7 @@
 import '../css/projects.css'
 import styled from 'styled-components'
 
-function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, buttonList, techList, background}) {
+function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, buttonList, techList, background, description}) {
     const Wrapper = styled.div`
         height: 400px;
         width: 100%;
@@ -32,22 +32,41 @@ function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, 
                     <img src={sourceImage} width='auto' height='250px' alt='' className='project-source-image'></img>
                 </div>
                 <div class="overlay">
-                    <div>as,dkfjalskdfjlasdkjf</div>
+                    <div className='project-description'>{description}</div>
                 </div>
-                <hr className='project-line'></hr>
+                
+            </div>
+            {/* <div className='project-line-container'> */}
+            <hr className='project-line'></hr>
+            <div className='project-title-display'>
+                <div>{projectName}</div>
             </div>
             <div className='project-details-wrapper'>
-                <div className='project-name'>{projectName}</div>
-                <div className='project-index'>{projectIndex}</div>
-                <div className='project-index'>{projectDate}</div>
+                <div className='project-detail-container'>
+                    <div className='project-detail'>
+                        <div className='project-index'>{"| 0" + projectIndex + "."}</div>
+                    </div>
+                    <div className='project-detail'>
+                        <div className='project-title'>
+                            {projectName}
+                        </div>
+                    </div>
+                    <div className='project-detail'>
+                        <div className='project-date'>{projectName}</div>
+                    </div>
                 <div className='project-buttons'>
+
+                </div>
                     {buttonList.map((button) => {
                         console.log(button.type)
                         return (
                             <div>
-                                <div>{button.link}</div>
-                                <div>{button.buttonText}</div>
-                                <div>{button.text}</div>
+                                <a href={button.link} className='individ-button'>
+                                    <div>{button.buttonText}</div>
+                                    <div>{button.text}</div>
+                                </a>
+                                {/* <div>{button.link}</div> */}
+                                
                             </div>
                         )
                     })}
@@ -56,10 +75,11 @@ function ProjectContainer({sourceImage, projectName, projectIndex, projectDate, 
                         {techList.map((tech) => {
                             return (
                                 <div>
-                                    <img src={tech} width='20' height = '20'></img>
+                                    <img src={tech} width='20' height = '20' alt=''></img>
                                 </div>
                             )
                         })}
+                
                 </div>
             </div>
         </Wrapper>

@@ -25,7 +25,8 @@ function Projects() {
                 'https://apps.apple.com/ca/app/markham-trails/id1640993603',
                 'iOS'),
             ],
-            [Flutter, GMap]
+            [Flutter, GMap],
+            'Markham Trails is a Flutter application developed for informational and entertaining hiking trails in Markham. Equipped with Google Maps API and location tracking, the user can enjoy audio recordings and interesting facts about different landmarks they are close to. This is a project in direct collaboration with the City of Markham and Markham Public Library.'
         ),
         // new ProjectBundle(
         //     UFound, 
@@ -59,7 +60,9 @@ function Projects() {
                         projectDate={project.date} 
                         buttonList={project.buttonList} 
                         techList={project.techList} 
-                        background='linear-gradient(354deg, #DAEDF0 10.68%, #EFEECF 96.49%);'></ProjectContainer>
+                        background='linear-gradient(354deg, #DAEDF0 10.68%, #EFEECF 96.49%);'
+                        description={project.description}
+                        ></ProjectContainer>
                     )
                 })}
             </div>
