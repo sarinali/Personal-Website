@@ -48,6 +48,9 @@
 
 
 .overlay:hover {
+    /* @media (max-width: 760px) {
+        opacity: 0;
+    } */
     opacity: 0.75;
 }
 
@@ -77,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 300px;
 }
 
 .project-detail {
@@ -187,4 +190,20 @@
         /* margin-left: 20%;
         margin-right: 20%; */
     }
+
+    .overlay:hover {
+        opacity: 0;
+    }
+    #a:hover + #b {
+        opacity: 1;
+    }
+
+    .project-image {
+        margin-top: 30px;
+    }
+
+    .project-detail {
+        margin-left: 36px;
+    }
+
 }

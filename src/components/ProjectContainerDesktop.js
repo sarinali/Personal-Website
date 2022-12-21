@@ -2,9 +2,10 @@ import "../css/projects.css";
 import styled from "styled-components";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import React from 'react'
 
 
-function ProjectContainer({
+function ProjectContainerDesktop({
   sourceImage,
   projectName,
   projectIndex,
@@ -16,8 +17,17 @@ function ProjectContainer({
   isDark,
   textWidth
 }) {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 760;
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    return () => window.removeEventListener("resize", window.handleWindowResize);
+  }, []);
+
   const Wrapper = styled.div`
-    height: 400px;
+    height: ${width > breakpoint ? '400px' : '600px'};
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,11 +37,12 @@ function ProjectContainer({
     margin-bottom: 50px;
     @media (max-width: 760px) {
       display: block;
+      margin-top: 30px;
     }
   `;
 
   const Title = styled.div`
-    font-size: 40px;
+    font-size: ${width > breakpoint ? '40px' : '24px'};
     color: ${isDark ? "white" : "black"};
     font-weight: bold;
   `;
@@ -42,7 +53,8 @@ function ProjectContainer({
   `
 
   const Index = styled.div`
-    font-size: 36px;
+    ${'' /* font-size: 36px; */}
+    font-size: ${width > breakpoint ? '36px' : '20px'};
     font-weight: bold;
     color: ${isDark ? "#DE4736" : "#7F0019"};
   `;
@@ -52,25 +64,10 @@ function ProjectContainer({
     
   `;
 
-//   const ProjectDescription = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     ${'' /* width: 350px; */}
-//     width: ${textWidth}
-//   `;
-
-  console.log(isDark)
+  
   return (
+    
     <Wrapper>
-      {/* <div className='poop'>
-                <div className='project-image-container'>
-
-                    <img src={sourceImage} alt='' className='project-image' id='image'></img>
-                </div>
-                    <div className='image-hover'></div>
-
-            </div> */}
       <div class="projectimage-container">
         <div class="project-image">
           <img
@@ -84,6 +81,7 @@ function ProjectContainer({
         <div className="overlay" id="a">
           <div className="project-description">{description}</div>
         </div>
+        {/* after 760 px make sure to take render somewhere else  */}
       <div className="project-title-display" id="b">
         <div>{projectName}</div>
       </div>
@@ -137,4 +135,4 @@ function ProjectContainer({
   );
 }
 
-export default ProjectContainer;
+export default ProjectContainerDesktop;

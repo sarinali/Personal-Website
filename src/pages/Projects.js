@@ -11,13 +11,25 @@ import KiwiiMenu from '../assets/projects_assets/kiwiimenu.png'
 import WolfPackApp from '../assets/projects_assets/wolfpackapp.png'
 import Boink from '../assets/projects_assets/boink.png'
 import BattleShip from '../assets/projects_assets/battleship.png'
-import ProjectContainer from "../components/ProjectContainer";
+import ProjectContainerDesktop from "../components/ProjectContainerDesktop";
 import ProjectBundle from '../components/ProjectBundle'
 import ProjectButton from "../components/ProjectButton";
 import TechBundle from '../components/TechBundle'
+import React from 'react'
+
+import ProjectContainerMobile from '../components/ProjectContainerMobile'
 
 
 function Projects() {
+    const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 760;
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    return () => window.removeEventListener("resize", window.handleWindowResize);
+  }, []);
+//   width > breakpoint ? console.log('greater than 760') : console.log('less than 760')
     const projects = [
         new ProjectBundle(
             Trails, 
@@ -180,10 +192,9 @@ function Projects() {
                     displayIndex={'| 02'}
                     displayText={['Past or ongoing programming related projects. ', 'Lots to come!']}
                 ></PageIntro>
-            <div>
+            <div className="projects">
                 {projects.map((project) => {
-                    return (
-                        <ProjectContainer 
+                    {/* return width < breakpoint ? <ProjectContainerMobile /> : <ProjectContainerDesktop 
                         sourceImage={project.image} 
                         projectName={project.title} 
                         projectIndex={project.index} 
@@ -194,8 +205,20 @@ function Projects() {
                         description={project.description}
                         isDark = {project.dark}
                         textWidth = {project.textWidth}
-                        ></ProjectContainer>
-                    )
+                        ></ProjectContainerDesktop>; */}
+                        return <ProjectContainerDesktop 
+                        sourceImage={project.image} 
+                        projectName={project.title} 
+                        projectIndex={project.index} 
+                        projectDate={project.date} 
+                        buttonList={project.buttonList} 
+                        techList={project.techList} 
+                        background={project.background}
+                        description={project.description}
+                        isDark = {project.dark}
+                        textWidth = {project.textWidth}
+                        ></ProjectContainerDesktop>
+                    
                 })}
             </div>
         </div>

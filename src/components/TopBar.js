@@ -12,7 +12,7 @@ function TopBar() {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     return () => window.removeEventListener("resize", window.handleWindowResize);
   }, []);
-  width > breakpoint ? console.log('greater than 760') : console.log('less than 760')
+  // width > breakpoint ? console.log('greater than 760') : console.log('less than 760')
   // }
   return width < breakpoint ? <TopBarMobile /> : <TopBarDesktop />;
   
