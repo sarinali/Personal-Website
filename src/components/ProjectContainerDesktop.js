@@ -27,7 +27,7 @@ function ProjectContainerDesktop({
   }, []);
 
   const Wrapper = styled.div`
-    height: ${width > breakpoint ? '400px' : '600px'};
+    height: ${width > breakpoint ? '400px' : 'inherit'};
     width: 100%;
     display: flex;
     justify-content: center;
@@ -63,6 +63,18 @@ function ProjectContainerDesktop({
     color: ${isDark ? "#DE4736" : "#7F0019"};
     
   `;
+
+  const MobileDescription = styled.div`
+    display: none;
+    @media (max-width: 760px) {
+      display: flex;
+      text-align: left;
+      margin-left: 10%;
+      margin-right: 10%;
+      color: ${isDark? 'white' : 'black'};
+      margin-top: 12px;
+    }
+  `
 
   
   return (
@@ -130,6 +142,7 @@ function ProjectContainerDesktop({
             );
           })}
         </div>
+        <MobileDescription>{description}</MobileDescription>
       </div>
     </Wrapper>
   );

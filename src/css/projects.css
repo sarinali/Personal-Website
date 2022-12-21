@@ -180,6 +180,10 @@
     margin-left: 24px;
 }
 
+.mobile-description {
+    display: none;
+}
+
 
 @media (max-width: 760px) {
     .project-source-image {
@@ -203,7 +207,37 @@
     }
 
     .project-detail {
-        margin-left: 36px;
+        margin-top: 12px;
+        margin-left: 10%;
     }
 
+    .project-buttons {
+        margin-left: 10%;
+    }
+
+    .project-tech {
+        margin-left: 10%;
+    }
+
+    .individ-tech {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .project-line {
+        display: none;
+    }
+
+    .project-title-display {
+        display: none;
+    }
+
+    .mobile-description {
+        display: flex;
+        text-align: left;
+    }
+
+    .project-details-wrapper {
+        padding-bottom: 5%;
+    }
 }
