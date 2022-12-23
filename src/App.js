@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import ContactMe from './pages/ContactMe';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
             <Route exact path="/projects" element={<Projects></Projects>}></Route>
             <Route exact path="/contact" element={<ContactMe></ContactMe>}></Route>
         </Routes>
-        <footer className="footer"></footer>
+        <Footer></Footer>
       </div>
     </Router>
   );

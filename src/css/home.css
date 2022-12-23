@@ -10,14 +10,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px);
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .home-text{
     display: inline-block;
     justify-content: start;
     vertical-align: top;
-    height: 75vh;
+    /* height: 75vh; */
 }
 
 .media-container {
@@ -49,6 +50,10 @@
     position: absolute;
 }
 
+.media-wrapper {
+    /* margin-left: 50px; */
+}
+
 .character-label {
     top: 80px;
     right: 0;
@@ -71,7 +76,8 @@
 }
 
 .image {
-    height: 75vh;
+    height: 500px;
+    width: auto;
 }
 
 .icon-container {
@@ -152,15 +158,6 @@
     margin-top: 18px;
     width: 35vw;
 }
-
-.footer {
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    /* position: fixed;
-    bottom: 0; */
-}
-
 @media (max-width: 760px) {
     .media-container {
         display: block;
@@ -179,15 +176,16 @@
     }
 
     .home-body {
-        padding: 50px;
-        /* margin-left: 50px;
-        margin-right: 50px; */
+        
+        margin-left: 50px;
+        margin-right: 50px;
         /* margin-top: 50px; */
         display: inline-block;
         justify-content: center;
     }
 
     .home-text {
+        /* margin-left: 50px; */
         display: block;
     }
 
@@ -365,5 +363,8 @@
 
     .home-name-chinese-wrapper {
         font-size: 30px;
+    }
+    .image-container {
+
     }
 }

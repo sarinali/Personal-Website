@@ -63,3 +63,15 @@
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+  .btn {
+    text-decoration: none;
+    color: white;
+    margin-top: 12px;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  .btn:hover {
+    color: #a90000;
+  }

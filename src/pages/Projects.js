@@ -194,18 +194,6 @@ function Projects() {
                 ></PageIntro>
             <div className="projects">
                 {projects.map((project) => {
-                    {/* return width < breakpoint ? <ProjectContainerMobile /> : <ProjectContainerDesktop 
-                        sourceImage={project.image} 
-                        projectName={project.title} 
-                        projectIndex={project.index} 
-                        projectDate={project.date} 
-                        buttonList={project.buttonList} 
-                        techList={project.techList} 
-                        background={project.background}
-                        description={project.description}
-                        isDark = {project.dark}
-                        textWidth = {project.textWidth}
-                        ></ProjectContainerDesktop>; */}
                         return <ProjectContainerDesktop 
                         sourceImage={project.image} 
                         projectName={project.title} 
