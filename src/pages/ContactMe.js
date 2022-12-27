@@ -1,7 +1,8 @@
 import PageIntro from "../components/PageIntro";
 import '../css/contact.css'
 import Instagram from '../assets/contactme_assets/ig.png'
-import Resume from '../assets/contactme_assets/resume.png'
+import ResumeIMG from '../assets/contactme_assets/resume.png'
+import Resume from '../assets/contactme_assets/Resume-sarina.pdf'
 import LinkedIn from '../assets/contactme_assets/linkedin.png'
 
 function ContactMe() {
@@ -19,8 +20,8 @@ function ContactMe() {
                         <div className="ig-handle">@sarinajnli</div>
                         <div className="ig-label">Instagram</div>
                     </a>
-                    <a className="resume-container" href='https://docs.google.com/document/d/1xcm1_6RKUIltCYXJj37xoyrBq-EhCZ1ssYryM6e2us8/edit?usp=sharing'>
-                        <img src={Resume} alt='' className='resume'></img>
+                    <a className="resume-container" href={Resume} target='_blank' alt='' rel="noreferrer">
+                        <img src={ResumeIMG} alt='' className='resume'></img>
                         <div className="ig-handle">View PDF</div>
                         <div className="ig-label">Resume</div>
                     </a>
