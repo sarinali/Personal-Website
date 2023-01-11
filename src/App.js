@@ -8,13 +8,41 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import ContactMe from './pages/ContactMe';
 import Footer from './components/Footer';
+import React, { useState, useEffect } from 'react';
+import Mode from './Mode.js';
+import Toggle from 'react-toggle'
+import {MdDarkMode} from "react-icons/md";
+import "react-toggle/style.css" 
 
 
 function App() {
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+      if (theme === 'light') {
+        setTheme('dark');
+        Mode.isDark = true;
+      } else {
+        setTheme('light');
+        Mode.isDark = false;
+      }
+    };
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
   return (
     <Router>
-      <div className="App">
+      <div className={`App ${theme}`}>
         <TopBar></TopBar>
+        {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
+        <label>
+  <Toggle
+    // defaultChecked={this.state.soupIsReady}
+    icons={{
+      checked: <MdDarkMode />,
+      unchecked: null,
+    }}
+    onChange={toggleTheme} />
+</label>
         {/* <Link to="/aboutme">About</Link> */}
         <Routes>
             <Route exact path="/" element={<Home></Home>}></Route>

@@ -4,7 +4,6 @@ class ImageBundle {
         this.index = num;
         this.hanYuChar = character;
         this.blurb = description
-        // this.pathName = path
      }
 }
 
