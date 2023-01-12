@@ -158,6 +158,7 @@
     margin-top: 18px;
     width: 35vw;
 }
+
 @media (max-width: 760px) {
     .media-container {
         display: block;
@@ -352,7 +353,31 @@
     font-size: 30px;
 }
 
+.home-wrapper {
+    display: flex;
+    padding: 120px;
+    padding-top: 150px;
+}
+
+.img-main {
+    width: 35vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.home-phone {
+    position: absolute;
+}
+
+.home-img-main {
+    position: relative;
+}
+
 @media (max-width: 760px) {
+    .home-wrapper {
+        display: block;
+    }
+
     .home-name-english-wrapper {
         display: block;
         margin-top: 20%;
@@ -364,7 +389,5 @@
     .home-name-chinese-wrapper {
         font-size: 30px;
     }
-    .image-container {
 
-    }
 }

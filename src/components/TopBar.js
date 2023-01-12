@@ -1,9 +1,10 @@
 import TopBarDesktop from './TopBarDesktop'
 import TopBarMobile from './TopBarMobile'
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 
 function TopBar() {
+
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 760;
   React.useEffect(() => {

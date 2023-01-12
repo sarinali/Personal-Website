@@ -1,5 +1,5 @@
 class Mode {
-    static isDark = false;
+    static curMode = "light";
 }
 
 export default Mode;
