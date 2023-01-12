@@ -10,18 +10,17 @@ import Projects from './pages/Projects';
 import ContactMe from './pages/ContactMe';
 import Footer from './components/Footer';
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 
 
 function App() {
   return (
-    <Router>
+    <ParallaxProvider>
+        <Router>
       <div className="App" id='app'>
         <TopBar></TopBar>
-        {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
-        
-        {/* <Link to="/aboutme">About</Link> */}
         <Routes>
             <Route exact path="/" element={<Home></Home>}></Route>
             <Route exact path="/aboutme" element={<AboutMe></AboutMe>}></Route>
@@ -32,6 +31,8 @@ function App() {
         <Footer></Footer>
       </div>
     </Router>
+    </ParallaxProvider>
+    
   );
 }
 

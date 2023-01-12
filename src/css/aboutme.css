@@ -108,8 +108,44 @@
     margin-left: 24px;
     text-align: left;
 }
+
+.home-intro-en-light {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    font-size: 500%;
+    text-align: left;
+    
+}
+
+.home-intro-cn-light {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    font-size: 200%;
+    text-align: left;
+    
+}
+.home-text {
+    margin-right: 50px;
+    /* font-size: 3em; */
+}
+
+
+
  
 @media (max-width: 760px) {
+    .home-intro-cn-light {
+        font-size: 150%;
+    }
+    .home-intro-en-light{
+        font-size: 300%;
+    }
+
+    .home-text {
+        margin-right: 0;
+    }
 
     .media-body {
         display: block;
