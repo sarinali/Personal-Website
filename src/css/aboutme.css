@@ -157,13 +157,13 @@
 .writing-title-light {
     font-size: 2em;
     font-weight: bold;
-    border-top: 2px solid black;
+    border-top: 2px solid #eb4034;;
 }
 
 .writing-title-dark {
     font-size: 2em;
     font-weight: bold;
-    border-top: 2px solid white;
+    border-top: 2px solid #eb4034;;
 }
 
 .writing-label {
@@ -207,6 +207,7 @@
 
 .blogpost-separator {
     width: calc(100vw - 240px);
+    /* color: #eb4034; */
 }
 
 .blogpost-wrapper {
@@ -220,14 +221,51 @@
 }
 
 @media (max-width: 760px) {
+    .new-indicator {
+        margin-right: 30px;
+    }
+    .blogpost-separator {
+        width: calc(100vw - 120px);
+    }
+    .blog-body {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .blogpost {
+        padding-left: 60px;
+        width: calc(100vw );
+    }
+    .aboutme-p1 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
     .aboutme-body {
         display: block;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 0;
     }
-    .home-intro-cn-light {
-        font-size: 150%;
+
+    .me {
+        /* margin-bottom: 60px; */
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .writing-header {
+        margin-left: 60px;
+    }
+
+
+    .aboutme-p {
+        margin-top: 120px;
+    }
+    .home-intro-cn {
+        font-size: 120%;
     }
     .home-intro-en{
-        font-size: 300%;
+        font-size: 150%;
     }
 
     .home-text {

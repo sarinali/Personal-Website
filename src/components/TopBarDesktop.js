@@ -29,7 +29,7 @@ function TopBarDesktop() {
     }, [theme]);
 
     const changeOpacity = () => {
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         var minOpacity = 0.5;
         var maxScrollBreakpoint = 200;
         var newOpacity = window.scrollY / maxScrollBreakpoint;

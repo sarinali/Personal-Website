@@ -29,6 +29,7 @@ function BlogPosts() {
                 const newText = text.split('/n').map(str => <p className="blog-body">{str}<br></br></p>);
                 console.log(newText)
                 return (
+
                     <Collapsible trigger={<div className="blogpost-wrapper">
                         <div className="blogpost" id="blog">
                             <div className="blog-title">{post.title}</div>
@@ -43,8 +44,9 @@ function BlogPosts() {
                         <div>
                             {newText}
                         </div>
-                    </Collapsible>
-                );
+                    </Collapsible>)
+                    
+                
             })}
         </div>
     )

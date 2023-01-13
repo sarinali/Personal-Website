@@ -147,6 +147,7 @@
 .page-header-parent {
     width: 100%;
     display: block;
+    padding-top: 120px;
 }
 
 .aboutme-line {
@@ -172,6 +173,9 @@
 }
 
 @media (max-width: 760px) {
+    .page-header-parent {
+        padding-top: 30px;
+    }
     /* .page-header-parent {
         margin-left: 50px;
         display: flex;
@@ -217,5 +221,7 @@
         width: 100%;
         
     }
+
+
 
 }

@@ -33,7 +33,7 @@ function ProjectContainerDesktop({
     justify-content: center;
     align-items: center;
     position: relative;
-    background: ${background};
+    ${'' /* background: ${background}; */}
     margin-bottom: 50px;
     @media (max-width: 760px) {
       display: block;
@@ -43,12 +43,12 @@ function ProjectContainerDesktop({
 
   const Title = styled.div`
     font-size: ${width > breakpoint ? '40px' : '24px'};
-    color: ${isDark ? "white" : "black"};
+    ${'' /* color: ${isDark ? "white" : "black"}; */}
     font-weight: bold;
   `;
 
   const Date = styled.div`
-    color: ${isDark ? "white" : "black"};
+    ${'' /* color: ${isDark ? "white" : "black"}; */}
     font-size: 20px;
   `
 
@@ -56,7 +56,7 @@ function ProjectContainerDesktop({
     ${'' /* font-size: 36px; */}
     font-size: ${width > breakpoint ? '36px' : '20px'};
     font-weight: bold;
-    color: ${isDark ? "#DE4736" : "#7F0019"};
+    ${'' /* color: ${isDark ? "#DE4736" : "#7F0019"}; */}
   `;
 
   const ProjectTitleDisplay = styled.div`
@@ -71,7 +71,7 @@ function ProjectContainerDesktop({
       text-align: left;
       margin-left: 10%;
       margin-right: 10%;
-      color: ${isDark? 'white' : 'black'};
+      ${'' /* color: ${isDark? 'white' : 'black'}; */}
       margin-top: 12px;
     }
   `

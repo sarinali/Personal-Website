@@ -13,9 +13,9 @@ function PageIntro({pageName, displayIndex, displayText}) {
             
             <div className='page-header-container'>
                 <div className='page-information'>
-                    <div className='page-index-display'>
+                    {/* <div className='page-index-display'>
                         <div>{displayIndex}</div>
-                    </div>
+                    </div> */}
                     <div className='page-name'>
                         <div>{pageName}</div>
                     </div>
