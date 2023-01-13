@@ -113,21 +113,21 @@
     text-align: left;
 }
 
-.home-intro-en-light {
+.home-intro-en {
     display: flex;
     align-items: flex-start;
     justify-content: start;
-    font-size: 500%;
+    font-size: 260%;
     text-align: left;
-    
+    line-height: 1.2;
 }
 
-.home-intro-cn-light {
-    margin-top: 30px;
+.home-intro-cn {
+    margin-top: 12px;
     display: flex;
     align-items: flex-start;
     justify-content: start;
-    font-size: 200%;
+    font-size: 150%;
     text-align: left;
     
 }
@@ -139,7 +139,7 @@
 
 .me {
     width: 20vw;
-    height: auto;
+    height: 20vw;
     border-radius: 20px;
 }
 
@@ -213,6 +213,12 @@
     display: flex;
 }
 
+.blog-body {
+    padding-left: 120px;
+    padding-right: 120px;
+    text-align: left;
+}
+
 @media (max-width: 760px) {
     .aboutme-body {
         display: block;
@@ -220,7 +226,7 @@
     .home-intro-cn-light {
         font-size: 150%;
     }
-    .home-intro-en-light{
+    .home-intro-en{
         font-size: 300%;
     }
 

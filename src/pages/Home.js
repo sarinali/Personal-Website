@@ -12,10 +12,10 @@ function Home() {
     <div className="home-wrapper">
         <div className="home-text">
             <div className="home-intro-en">
-                <div className={`home-intro-en-${Mode.curMode}`}>My name is<br></br>Sarina!</div>
+                <div className={`home-intro-en`}>My name is<br></br>Sarina!</div>
             </div>
             <div className="home-intro-cn">
-                <div className={`home-intro-cn-${Mode.curMode}`}>我叫李晶!</div>
+                <div className={`home-intro-cn`}>我叫李晶!</div>
             </div>
             <div class="wrapper">
            <div className="home-words-intro">I am a</div>
