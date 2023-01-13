@@ -20,6 +20,12 @@ function TopBarDesktop() {
     useEffect(() => {
         document.body.className = theme;
         document.getElementById("app").className = `App ${theme}`
+        // if (Mode.curMode === "light") {
+        document.getElementById("writingtitle").className = `writing-title-${theme}`
+        // document.getElementById("blog").className = `blogpost-${theme}`
+
+
+        // }
     }, [theme]);
 
     const changeOpacity = () => {

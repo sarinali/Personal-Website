@@ -2,7 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
+    padding-top: 150px;
+    padding-left: 120px;
+    padding-bottom: 120px;
+    padding-right: 120px;
 }
 
 
@@ -133,9 +137,86 @@
 }
 
 
+.me {
+    width: 20vw;
+    height: auto;
+    border-radius: 20px;
+}
 
- 
+.aboutme-p1 {
+    padding-left: 40px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.writing-header {
+    display: flex;
+    margin-left: 120px;
+}
+
+.writing-title-light {
+    font-size: 2em;
+    font-weight: bold;
+    border-top: 2px solid black;
+}
+
+.writing-title-dark {
+    font-size: 2em;
+    font-weight: bold;
+    border-top: 2px solid white;
+}
+
+.writing-label {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.new-indicator {
+    background-color: #c36ade;
+    border-radius: 6px;
+    width: 60px;
+    margin-right: 50px;
+
+}
+
+
+.blog-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+.blog-title {
+    text-align: left;
+    font-size: 1.7em;
+}
+
+.blogpost {
+    padding-left: 120px;
+    transition: 0.2s;
+    border-radius: 30px;
+    width: calc(100vw - 240px);
+}
+
+.blogpost:hover {
+    cursor: pointer;
+}
+
+.bloglist-body {
+    margin-top: 50px;
+}
+
+.blogpost-separator {
+    width: calc(100vw - 240px);
+}
+
+.blogpost-wrapper {
+    display: flex;
+}
+
 @media (max-width: 760px) {
+    .aboutme-body {
+        display: block;
+    }
     .home-intro-cn-light {
         font-size: 150%;
     }
@@ -149,10 +230,6 @@
 
     .media-body {
         display: block;
-    }
-
-    .media-container {
-        /* margin-left: 50px; */
     }
 
     .aboutme-container{
