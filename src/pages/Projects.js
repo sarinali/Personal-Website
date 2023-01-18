@@ -11,14 +11,13 @@ import KiwiiMenu from '../assets/projects_assets/kiwiimenu.png'
 import WolfPackApp from '../assets/projects_assets/wolfpackapp.png'
 import Boink from '../assets/projects_assets/boink.png'
 import BattleShip from '../assets/projects_assets/battleship.png'
-import ProjectContainerDesktop from "../components/ProjectContainerDesktop";
 import ProjectBundle from '../components/ProjectBundle'
 import ProjectButton from "../components/ProjectButton";
 import TechBundle from '../components/TechBundle'
 import React from 'react'
-
-import ProjectContainerMobile from '../components/ProjectContainerMobile'
-
+import Lasyntex from "../assets/projects_assets/lasyntex.png"
+import { Parallax } from "react-scroll-parallax";
+import "../css/projects.css"
 
 function Projects() {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -29,7 +28,6 @@ function Projects() {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     return () => window.removeEventListener("resize", window.handleWindowResize);
   }, []);
-//   width > breakpoint ? console.log('greater than 760') : console.log('less than 760')
     const projects = [
         new ProjectBundle(
             Trails, 
@@ -187,7 +185,24 @@ function Projects() {
 
     return (
         <div className="project-body">
-            <PageIntro
+            <div className="feature-title">Featured</div>
+            <Parallax speed={width > 760 ? -10 : 0}>
+                <div className="featured-projects">
+                <div className="feature-container">
+                    <img src={Trails} alt = "" className="feature-image"></img>
+                    <div>Markham Trails</div>
+                </div>
+                <div className="feature-container">
+                    <img src={WolfPackApp} alt = "" className="feature-image"></img>
+                    <div>wolfpackapp</div>
+                </div>
+                <div className="feature-container">
+                    <img src={Lasyntex} alt = "" className="feature-image"></img>
+                    <div>Lasyntex</div>
+                </div>
+                </div>
+            </Parallax>
+            {/* <PageIntro
                     pageName={'Projects'}
                     displayIndex={'| 02'}
                     displayText={['Past or ongoing programming related projects. ', 'Lots to come!']}
@@ -208,7 +223,7 @@ function Projects() {
                         ></ProjectContainerDesktop>
                     
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }
