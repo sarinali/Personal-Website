@@ -2,7 +2,7 @@ import PageIntro from "../components/PageIntro";
 import '../css/contact.css'
 import Instagram from '../assets/contactme_assets/ig.png'
 import ResumeIMG from '../assets/contactme_assets/resume.png'
-import Resume from '../assets/contactme_assets/sarinaliresume.pdf'
+import Resume from '../assets/contactme_assets/sarinaliresume1.pdf'
 import LinkedIn from '../assets/contactme_assets/linkedin.png'
 
 function ContactMe() {

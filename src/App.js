@@ -11,6 +11,9 @@ import ContactMe from './pages/ContactMe';
 import Footer from './components/Footer';
 import React from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import MarkhamTrails from './pages/MarkhamTrails';
+import Wolfpackapp from './pages/Wolfpackapp';
+import Lasyntex from './pages/Lasyntex';
 
 
 
@@ -27,7 +30,10 @@ function App() {
             <Route exact path="/experience" element={<Experience></Experience>}></Route>
             <Route exact path="/projects" element={<Projects></Projects>}></Route>
             <Route exact path="/contact" element={<ContactMe></ContactMe>}></Route>
-        </Routes>
+            <Route exact path="/projects/markhamtrails" element={<MarkhamTrails></MarkhamTrails>}></Route>
+            <Route exact path="/projects/wolfpackapp" element={<Wolfpackapp></Wolfpackapp>}></Route>
+            <Route exact path="/projects/lasyntex" element={<Lasyntex></Lasyntex>}></Route>
+        </Routes> 
         <Footer></Footer>
       </div>
     </Router>

@@ -10,6 +10,7 @@ import "../css/projects.css"
 import {BsFillArrowRightCircleFill} from "react-icons/bs"
 import Collapsible from 'react-collapsible';
 import {AiOutlineArrowDown} from "react-icons/ai"
+import {Link} from "react-router-dom"
 
 
 function Projects() {
@@ -185,21 +186,30 @@ function Projects() {
                     <img src={Trails} alt = "" className="feature-image"></img>
                     <div className="feature-item">
                         <div>Markham Trails</div>
-                        <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+                        <Link to="/projects/markhamtrails" className='link-feature'>
+                            <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+
+                        </Link>
                     </div>
                 </div>
                 <div className="feature-container">
                     <img src={WolfPackApp} alt = "" className="feature-image"></img>
                     <div className="feature-item">
                         <div>wolfpackapp</div>
-                        <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+                        <Link to="/projects/wolfpackapp" className='link-feature'>
+                            <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+
+                        </Link>
                     </div>
                 </div>
                 <div className="feature-container">
                     <img src={Lasyntex} alt = "" className="feature-image"></img>
                     <div className="feature-item">
                         <div>Lasyntex</div>
-                        <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+                        <Link to="/projects/lasyntex" className='link-feature'>
+                            <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+
+                        </Link>
                     </div>
                 </div>
                 </div>

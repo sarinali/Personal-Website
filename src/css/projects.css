@@ -225,7 +225,7 @@
 }
 
 .feature-icon:hover {
-    color: #ba0025;
+    color: #7F0019;
     transition: 0.2s;
     cursor:pointer;
 }
@@ -233,6 +233,10 @@
 .other-separator {
     width: calc(100vw - 240px);
     stroke: 1px grey;
+}
+
+.link-feature:hover {
+    color: #ba0025;
 }
 
 .other-name {
@@ -243,6 +247,10 @@
     padding-left: 10px;
     padding-right: 10px;
     font-size: 24px;
+}
+
+a {
+    color: #ba0025;
 }
 
 @media (max-width: 760px) {
