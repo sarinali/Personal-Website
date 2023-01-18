@@ -40,7 +40,7 @@ function BlogPosts() {
                             <hr className="blogpost-separator"></hr>
 
                         </div>
-                    </div>}>
+                    </div>} easing="ease">
                         <div>
                             {newText}
                         </div>
