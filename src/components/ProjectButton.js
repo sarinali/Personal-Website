@@ -10,7 +10,7 @@ export default class ProjectButton {
         } else if (buttonType === 'GitHub') {
             this.buttonText = 'View on GH';
         } else if (buttonType === 'Devpost') {
-            this.buttonText = 'View on DP';
+            this.buttonText = 'View on Devpost';
         } else if (buttonType === 'Web') {
             this.buttonText = 'Open in Web';
         }

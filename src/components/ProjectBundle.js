@@ -1,14 +1,10 @@
 export default class ProjectBundle {
-    constructor(imageComponent, projectTitle, projectDate, projectIndex, projectButtonList, projectTechList, projectDesciption, isDark, projectBackground, width) {  // Constructor
+    constructor(projectTitle, imageComponent, projectDate, projectTechList, projectDesciption, projectButtonList) {  // Constructor
+      this.title = projectTitle
       this.image = imageComponent;
-      this.title = projectTitle;
       this.date = projectDate;
-      this.index = projectIndex;
-      this.buttonList = projectButtonList;
       this.techList = projectTechList;
       this.description = projectDesciption;
-      this.dark = isDark;
-      this.background = projectBackground;
-      this.textWidth = width;
+      this.buttonList = projectButtonList;
     }
 }

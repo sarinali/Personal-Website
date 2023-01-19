@@ -253,7 +253,41 @@ a {
     color: #ba0025;
 }
 
+.other-proj-img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.other-img {
+    display: flex;
+    justify-content: center;
+}
+
+.other-proj-wrapper {
+    text-align: left;
+}
+
+.other-proj-t {
+    margin-top: 20px;
+}
+
+.other-proj-tlist {
+    display: flex;
+    margin-top: 20px;
+}
+
+.other-tech {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;    /* height: auto; */
+}
+
 @media (max-width: 760px) {
+    .other-proj-img {
+        width: 80%;
+        height: auto;
+    }
     .feature-item {
         margin-bottom: 20px;
     }

@@ -64,14 +64,15 @@
     border-radius: 10px;
 }
 
-.img-invid-s {
-    
-}
 
 .img-vid {
     height: 400px;
     width: 400px;
     border-radius: 20px;
+}
+.img-indiv-favicon {
+    width: 200px;
+    height: auto;
 }
 
 @media (max-width: 760px) {
