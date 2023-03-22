@@ -7,17 +7,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Mode from '../Mode'
 import BlogPosts from '../components/BlogPosts';
-
-
-
+import React from 'react'
 
 
 function AboutMe() {
+    const [width, setWidth] = React.useState(window.innerWidth);    React.useEffect(() => {
+        /* Inside of a "useEffect" hook add an event listener that updates
+           the "width" state variable when the window size changes */
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+        return () => window.removeEventListener("resize", window.handleWindowResize);
+    }, []);
     var images = [Me, Goomy, MeGym];
     return (
         <div className="aboutme">
             <div className="aboutme-body">
-            <Parallax speed={-10}>
+            <Parallax speed={width > 760 ? -10 : 0}>
                 <div className="me-container">
                 <Carousel>
                     {images.map((image) => {

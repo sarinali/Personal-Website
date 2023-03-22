@@ -34,7 +34,7 @@ function Home() {
             </div>
             <div className="home-p1">
                 <div className="home-text-p1">
-                <br></br>I like cs, lifting, cooking, fashion, music and sleeping. I'm working hard to attend more hackathons, get an internship, obtain a 4.0, squat 225lbs, finish my side projects, cook more and online shop.
+                <br></br>I like cs, lifting, cooking, music and sleeping. I'm working hard to attend more hackathons, obtain a 4.0, squat 225lbs, finish my side projects, cook more and online shop. Catch me in Robarts maybe? 
                 </div>
             </div>
         </div>
