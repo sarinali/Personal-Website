@@ -16,11 +16,12 @@ import Boink from "../assets/projects_assets/boink.png"
 import KiwiiMenu from "../assets/projects_assets/kiwiimenu.png"
 import BattleShip from "../assets/projects_assets/battleship.png"
 import UFound from "../assets/projects_assets/ufound.png"
+import MazeRunner from "../assets/projects_assets/mazerunner.png"
 import Unity from "../assets/projects_assets/technologies/unity.png"
 import ProjectButton from '../components/ProjectButton';
 import OtherProject from '../components/OtherProject';
 import Firebase from '../assets/projects_assets/technologies/firebase.png'
-
+import Python from '../assets/projects_assets/technologies/python.png'
 import Java from '../assets/projects_assets/technologies/java.png';
 
 const otherProjects = [
@@ -83,6 +84,19 @@ const otherProjects = [
                 "https://devpost.com/software/ufound",
                 "Devpost"
             )
+        ],
+    ),
+    new ProjectBundle(
+        "Maze Runner",
+        MazeRunner,
+        "March 2023",
+        [Python],
+        "My final project made with my groupmates for UofT CSC111 class, we created a program to generate and solve large mazes! With a focus on graph theory and graph theory algorithms, we used DFS to generate a randomized maze with a guaranteed answer and used BFS to compute the shortest answer to the maze. Made natively in Python, we used PyGame for user interaction and cool computations!",
+        [
+            new ProjectButton(
+                "https://github.com/sarinali/maze-runner",
+                "GitHub"
+            ),
         ],
     ),
 ]
