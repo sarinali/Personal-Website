@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 function TopBar() {
 
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 760;
+  const breakpoint = 900;
   React.useEffect(() => {
     /* Inside of a "useEffect" hook add an event listener that updates
        the "width" state variable when the window size changes */

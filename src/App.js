@@ -14,6 +14,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import MarkhamTrails from './pages/MarkhamTrails';
 import Wolfpackapp from './pages/Wolfpackapp';
 import Lasyntex from './pages/Lasyntex';
+import SarinaGPT from './pages/SarinaGPT.tsx';
 
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/projects/markhamtrails" element={<MarkhamTrails></MarkhamTrails>}></Route>
             <Route exact path="/projects/wolfpackapp" element={<Wolfpackapp></Wolfpackapp>}></Route>
             <Route exact path="/projects/lasyntex" element={<Lasyntex></Lasyntex>}></Route>
+            <Route exact path='/sarinagpt' element={<SarinaGPT></SarinaGPT>}></Route>
         </Routes> 
         <Footer></Footer>
       </div>

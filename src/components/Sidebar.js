@@ -14,6 +14,7 @@ export default props => {
         {/* <Link to='/experience' className='btn'>Experience</Link> */}
         <Link to='/projects' className='btn'>Projects</Link>
         <Link to='/contact' className='btn'>Contact Me</Link>
+        <Link to='/sarinagpt' className='btn'>SarinaGPT (beta)</Link>
     </Menu>
   );
 };
