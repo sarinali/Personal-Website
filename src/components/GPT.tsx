@@ -1,5 +1,5 @@
 import React from 'react'
- 
+// import env from "react-dotenv";
 
 type MyState = {
     question: string,
@@ -7,7 +7,7 @@ type MyState = {
 };
   
 
-class GPT extends React.Component<MyState> {
+class GPT extends React.Component< MyState> {
     state: MyState = {
         question: '',
         answer: ''
@@ -18,6 +18,7 @@ class GPT extends React.Component<MyState> {
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log(process.env.REACT_APP_OPENAI_API_KEY)
       }
     
       handleChange(event) {
