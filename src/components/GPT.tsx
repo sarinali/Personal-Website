@@ -1,5 +1,13 @@
 import React from 'react'
-// import env from "react-dotenv";
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import {
+  SystemMessagePromptTemplate,
+  HumanMessagePromptTemplate,
+  ChatPromptTemplate,
+  MessagesPlaceholder
+} from "langchain/prompts";
+import { ConversationChain } from "langchain/chains";
+import { BufferMemory } from "langchain/memory";
 
 type MyState = {
     question: string,
@@ -22,8 +30,8 @@ class GPT extends React.Component< MyState> {
       }
     
       handleChange(event) {
-        // this.setState({value: event.target.value});
-        this.setState({value: event.target.question})
+        this.setState({question: event.target.value})
+        console.log(event.target.value)
       }
     
       async handleSubmit(event) {
