@@ -1,20 +1,12 @@
-import React from 'react'
-import { ChatOpenAI } from "langchain/chat_models/openai";
-import {
-  SystemMessagePromptTemplate,
-  HumanMessagePromptTemplate,
-  ChatPromptTemplate,
-  MessagesPlaceholder
-} from "langchain/prompts";
-import { ConversationChain } from "langchain/chains";
-import { BufferMemory } from "langchain/memory";
+import React, {useState} from 'react'
+import Answer from './Answer';
+import "../css/sarinagpt.css"
 
 type MyState = {
     question: string,
     answer: string
 };
   
-
 class GPT extends React.Component< MyState> {
     state: MyState = {
         question: '',
@@ -26,7 +18,7 @@ class GPT extends React.Component< MyState> {
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(process.env.REACT_APP_OPENAI_API_KEY)
+        // console.log(process.env.REACT_APP_OPENAI_API_KEY)
       }
     
       handleChange(event) {
@@ -37,22 +29,22 @@ class GPT extends React.Component< MyState> {
       async handleSubmit(event) {
         // alert('A name was submitted: ' + this.state.value);
         console.log(this.state.question)
-        
-        // console.log(response)
         event.preventDefault();
+        
       }
 
 
     render() {
         return (
-            <div>
+            <div className='gpt-body'>
                 <form onSubmit={this.handleSubmit}>
             <label>
               Prompt:
               <input type="text" value={this.state.question} onChange={this.handleChange} />
             </label>
-            <input type="submit" value="Submit" />
+            {/* <input type="submit" value="Submit" /> */}
           </form>
+            <Answer question={this.state.question}></Answer>
             </div>
         )
     }
