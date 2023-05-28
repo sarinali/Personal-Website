@@ -69,7 +69,7 @@ function TopBarDesktop() {
                     <Link to="/contact" className={`topbar-item-${Mode.curMode}`}>Contact Me</Link>
                 </div>
                 <div className='topbar-item-container'>
-                    <Link to="/sarinagpt" className={`topbar-item-${Mode.curMode}`}>SarinaGPT (beta)</Link>
+                    <Link to="/sarinagpt" className={`topbar-item-${Mode.curMode}`}>SarinaGPT</Link>
                 </div>
                 <div className='topbar-spacer'></div>
                 <div className='toggle-item-container'>

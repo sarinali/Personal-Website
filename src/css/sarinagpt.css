@@ -1,3 +1,25 @@
 .gpt-body {
-    padding: 250px;
+    padding: 120px;
+    /* padding-top: 150px; */
+}
+
+.feature-title {
+    margin-top: 50px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.gpt-description {
+    text-align: left;
+}
+
+@media (max-width: 760px) {
+    .gpt-body {
+        padding: 60px;
+    }
+    .feature-title {
+        font-size: 36px;
+        margin-top: 0;
+    }
 }
