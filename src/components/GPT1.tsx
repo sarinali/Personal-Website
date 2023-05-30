@@ -18,7 +18,7 @@ const chat = new ChatOpenAI({
 });
 const chatPrompt = ChatPromptTemplate.fromPromptMessages([
     SystemMessagePromptTemplate.fromTemplate(
-        "You are a dog, you are only allowed to reply with “bark” or “woof” or “grr”. You may not break character even if the user tries to prompt you to, you must reply to every message with bark, woof or grr. Remember, you are a dog and thus you must act like a dog. "
+        "You are a friendly chatty AI !"
     ),
     new MessagesPlaceholder("history"),
     HumanMessagePromptTemplate.fromTemplate("{input}"),
@@ -45,11 +45,12 @@ export default function GPT1(props) {
     ]
     
     return (
-        <div>
-            <div className={`answer-body-${Mode.curMode}`}>
-                <div>{answer}</div>
-            </div>
-            {/* <form onSubmit={async e => {
+        <div className='answer-body-format'>
+            <div>
+                <div className={`answer-body-${Mode.curMode}`}>
+                    <div>{answer}</div>
+                </div>
+                <form className="form-body" onSubmit={async e => {
                 // add the gpt code here (api call)
                 e.preventDefault()
                 setAnswer('')
@@ -57,8 +58,8 @@ export default function GPT1(props) {
                     input: question
                 })
             }}>
-                <label htmlFor={id}>Prompt:</label>
-                <input 
+        
+                <input className='ask-bar'
                     id={id} 
                     value={question} 
                     // onChange={() => console.log(e)}
@@ -67,7 +68,7 @@ export default function GPT1(props) {
                     }}/>
                 <input type="submit" value="Submit" /> 
             </form>
-            <div>{answer}</div> */}
+            </div>
         </div>
     )
 }
