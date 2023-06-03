@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types'
 import GPT1 from "../components/GPT1";
 import "../css/sarinagpt.css"
+import "../css/home.css"
 
 
 class SarinaGPT extends React.Component {

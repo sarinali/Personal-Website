@@ -11,7 +11,7 @@ import { ConversationChain } from "langchain/chains";
 import { BufferMemory } from "langchain/memory";
 import Mode from '../Mode'
 import Constants from "../Constants"
-import Banner from './Banner';
+import Banner from './Banner.js';
 
 let generating = false;
 const chat = new ChatOpenAI({ 
@@ -37,6 +37,7 @@ const chain = new ConversationChain({
 export default function GPT1(props) {
     const [question, setQuestion] = useState(props?.value ?? '');
     const [answer, setAnswer] = useState('');
+    const [submittedQuestion, setSubmittedQuestion] = useState('');
     
     chat.callbacks = [
         {
@@ -50,14 +51,20 @@ export default function GPT1(props) {
             <div>
                 <div id="answerbody" className={`answer-body-${Mode.curMode}`}>
                     <Banner></Banner>
-                    <div className='answer-text'>{answer}</div>
+                    <div className='qa-text'>
+                        <div className='question-text'>{submittedQuestion}</div>
+                        <div className='answer-text'>{answer}</div>    
+                    </div>
                 </div>
                 <form id="formbody" className={`form-body-${Mode.curMode}`} onSubmit={async e => {
                 // get state of gpt
 
                 e.preventDefault()
-                setQuestion('')
-                if (!generating) {
+                // setSubmittedQuestion(question);
+        
+                if (!generating && question !== "") {
+                    setSubmittedQuestion(question)
+                    setQuestion('')
                     setAnswer('')
                     generating = true
                     console.log(generating)

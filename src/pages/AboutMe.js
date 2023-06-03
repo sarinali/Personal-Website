@@ -8,6 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Mode from '../Mode'
 import BlogPosts from '../components/BlogPosts';
 import React from 'react'
+import "../css/sarinagpt.css"
 
 
 function AboutMe() {
@@ -20,27 +21,30 @@ function AboutMe() {
     var images = [Me, Goomy, MeGym];
     return (
         <div className="aboutme">
-            <div className="aboutme-body">
-            <Parallax speed={width > 760 ? -10 : 0}>
-                <div className="me-container">
-                <Carousel>
-                    {images.map((image) => {
-                        return (
-                            <Carousel.Item>
-                                <img src={image} alt="" className="me"/>
-                            </Carousel.Item>
-                        );
 
-                    })}
-                </Carousel>
-                    {/* <img src={Me} alt="" className="me"></img> */}
+            <div className='aboutme-wrapper'>
+                <div className='sarina-title'>About Me</div>
+                <div className="aboutme-body">
+                    <Parallax speed={width > 760 ? -10 : 0}>
+                        <div className="me-container">
+                        <Carousel>
+                            {images.map((image) => {
+                                return (
+                                    <Carousel.Item>
+                                        <img src={image} alt="" className="me"/>
+                                    </Carousel.Item>
+                                );
+
+                            })}
+                        </Carousel>
+                            {/* <img src={Me} alt="" className="me"></img> */}
+                        </div>
+                    </Parallax>
+                    <div className="aboutme-p">
+                        <div className="aboutme-p1">I'm your average Robarts squatter, computer science student with a 4.0 (I do not have a 4.0) and software engineer enthusiast.</div>
+                        <div className="aboutme-p1"><br></br>Besides the fact I study computer science, code and do math, I enjoy lifting, journalling, drawing, playing League of Legends, learning chinese, playing Pokemon Go and listening to music. My favourite Pokemon is Goomy.</div>
+                    </div>
                 </div>
-            </Parallax>
-                <div className="aboutme-p">
-                    <div className="aboutme-p1">I'm your average Robarts squatter, computer science student with a 4.0 (I do not have a 4.0) and software engineer enthusiast.</div>
-                    <div className="aboutme-p1"><br></br>Besides the fact I study computer science, code and do math, I enjoy lifting, journalling, drawing, playing League of Legends, learning chinese, playing Pokemon Go and listening to music. My favourite Pokemon is Goomy.</div>
-                </div>
-        
             </div>
             <div className="writing-body">
                 <div className="writing-header">
