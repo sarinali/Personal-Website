@@ -5,28 +5,32 @@ import Mode from '../Mode.js';
 import Toggle from 'react-toggle'
 import {MdDarkMode} from "react-icons/md";
 import "react-toggle/style.css" 
+import { useLocation} from 'react-router-dom';
 
 function TopBarDesktop() {
     const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-      if (theme === 'light') {
-        setTheme('dark');
-        Mode.curMode = "dark";
-      } else {
-        setTheme('light');
-        Mode.curMode = "light";
-      }
+    const location = useLocation();
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+            Mode.curMode = "dark";
+        } else {
+            setTheme('light');
+            Mode.curMode = "light";
+        }
     };
     useEffect(() => {
         document.body.className = theme;
         document.getElementById("app").className = `App ${theme}`
         // if (Mode.curMode === "light") {
-        // document.getElementById("writingtitle").className = `writing-title-${theme}`
-        // document.getElementById("blog").className = `blogpost-${theme}`
-
-
-        // }
-    }, [theme]);
+        // console.log(location.pathname)
+        if (location.pathname === '/sarinagpt') {
+            document.getElementById("answerbody").className = `answer-body-${theme}`
+            document.getElementById("formbody").className = `form-body-${theme}`
+            document.getElementById("askbar").className = `ask-bar-${theme}`
+            document.getElementById("banner").className = `banner-${theme}`
+        }
+    }, [theme, location]);
 
     const changeOpacity = () => {
         // console.log(window.scrollY);
@@ -69,7 +73,7 @@ function TopBarDesktop() {
                     <Link to="/contact" className={`topbar-item-${Mode.curMode}`}>Contact Me</Link>
                 </div>
                 <div className='topbar-item-container'>
-                    <Link to="/sarinagpt" className={`topbar-item-${Mode.curMode}`}>SarinaGPT</Link>
+                    <Link to="/sarinagpt" className={`topbar-item-${Mode.curMode}`}>SarinaGPT (beta)</Link>
                 </div>
                 <div className='topbar-spacer'></div>
                 <div className='toggle-item-container'>

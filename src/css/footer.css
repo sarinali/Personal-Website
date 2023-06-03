@@ -8,12 +8,8 @@
 .footer {
     height: 190px;
     width: 100%;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
+
     background-color: #eb4034;
-    /* position: fixed;
-    bottom: 0; */
 }
 
 /* .footer-div1 {
@@ -121,6 +117,16 @@
 .footer-icon-container {
     margin-left: 16px;
     color: white;
+}
+
+.footer-leetcode {
+    font-size: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer-leetcode:hover {
+    color: orange;
 }
 
 .footer-github {

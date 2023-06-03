@@ -1,7 +1,7 @@
 import '../css/aboutme.css'
-import Me from "../assets/aboutme_assets/me.jpg";
+import Me from "../assets/aboutme_assets/me_af.JPG";
 import Goomy from "../assets/aboutme_assets/goomy.png";
-import MeGym from "../assets/aboutme_assets/megym.JPG";
+import MeGym from "../assets/aboutme_assets/gym.JPG";
 import { Parallax } from "react-scroll-parallax";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
@@ -37,8 +37,8 @@ function AboutMe() {
                 </div>
             </Parallax>
                 <div className="aboutme-p">
-                    <div className="aboutme-p1">I'm your average Robarts squatter, React.js and Flutter enjoyer and REST API with Node.js enthusiast. Java will remain my favourite language no matter what anyone tells me. </div>
-                    <div className="aboutme-p1"><br></br>Besides the fact I study computer science, code and do math, I enjoy lifting, journalling, drawing, bouldering, learning chinese, playing Pokemon Go and listening to music. My favourite Pokemon is Goomy.</div>
+                    <div className="aboutme-p1">I'm your average Robarts squatter, computer science student with a 4.0 (I do not have a 4.0) and software engineer enthusiast.</div>
+                    <div className="aboutme-p1"><br></br>Besides the fact I study computer science, code and do math, I enjoy lifting, journalling, drawing, playing League of Legends, learning chinese, playing Pokemon Go and listening to music. My favourite Pokemon is Goomy.</div>
                 </div>
         
             </div>

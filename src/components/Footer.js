@@ -1,6 +1,6 @@
 import "../css/footer.css";
 import {AiFillGithub, AiOutlineInstagram, AiOutlineLinkedin} from 'react-icons/ai';
-import {SiDevpost} from 'react-icons/si'; 
+import {SiDevpost, SiLeetcode} from 'react-icons/si'; 
 import {SlSocialSpotify} from 'react-icons/sl';
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -50,9 +50,16 @@ function Footer() {
                 data-tooltip-content='sarinali on Devpost'
                 ></SiDevpost>
                 <ReactTooltip anchorId={'devpost'} />
-
             </div>
             <div className="footer-icon-container">
+                <SiLeetcode className="footer-leetcode"
+                onClick={() => window.open('https://leetcode.com/incelleetcodr/', '_blank')}
+                id='leetcode'
+                data-tooltip-content='incelleetcodr on Leetcode'
+                ></SiLeetcode>
+                <ReactTooltip anchorId={'leetcode'} />
+            </div>
+            {/* <div className="footer-icon-container">
                 <AiOutlineInstagram className="footer-instagram"
                 onClick={() => window.open('https://www.instagram.com/sarinajnli/?next=%2F', '_blank')}
                 id='instagram'
@@ -60,7 +67,7 @@ function Footer() {
                 ></AiOutlineInstagram>
                 <ReactTooltip anchorId={'instagram'} />
 
-            </div>
+            </div> */}
             <div className="footer-icon-container">
                 <AiOutlineLinkedin className="footer-linkedin"
                 onClick={() => window.open('https://www.linkedin.com/in/sarinali/', '_blank')}
@@ -77,6 +84,7 @@ function Footer() {
                 ></SlSocialSpotify>
                 <ReactTooltip anchorId={'spotify'} />
             </div>
+            
         </div>
       </div>
     </div>
