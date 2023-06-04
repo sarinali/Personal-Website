@@ -29,6 +29,10 @@ function TopBarDesktop() {
             document.getElementById("formbody").className = `form-body-${theme}`
             document.getElementById("askbar").className = `ask-bar-${theme}`
             document.getElementById("banner").className = `banner-${theme}`
+        } else if (location.pathname === '/contact') {
+            document.getElementById("boxone").className = `name-text-${theme}`
+            document.getElementById("box2").className = `email-text-${theme}`
+            document.getElementById("box3").className = `message-text-${theme}`
         }
     }, [theme, location]);
 

@@ -1,38 +1,96 @@
-import PageIntro from "../components/PageIntro";
 import '../css/contact.css'
-import Instagram from '../assets/contactme_assets/ig.png'
-import ResumeIMG from '../assets/contactme_assets/resume.png'
-import Resume from '../assets/contactme_assets/SarinaLiCV.pdf'
-import LinkedIn from '../assets/contactme_assets/linkedin.png'
+import "../css/sarinagpt.css"
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { Parallax } from "react-scroll-parallax";
+import Mode from '../Mode';
+import { useLocation} from 'react-router-dom';
+
+// function ContactMe() {
+//     return (
+//         <div className={Mode.curMode}>hi</div>
+//     )
+// }
+
+// export default ContactMe;
 
 function ContactMe() {
+    const form = useRef();
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const location = useLocation();
+
+    console.log(location.pathname)
+
+    React.useEffect(() => {
+        /* Inside of a "useEffect" hook add an event listener that updates
+            the "width" state variable when the window size changes */
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+        return () => window.removeEventListener("resize", window.handleWindowResize);
+    }, []);
+
+    const sendEmail = (e) => {
+        // console.log("running")
+        e.preventDefault();
+        if (name === "" || email === "" || message === "") {
+            alert("Please don't leave a field empty!")
+        } else{
+            emailjs.sendForm('service_1uxlhsq', 'template_3np9n02', form.current, 'lBt5Ythj88u_mF8l3')
+            .then(() => {
+                alert("Message sent! Thanks, I will get back to you ASAP : )!")
+                setName("")
+                setEmail("")
+                setMessage("")
+            }, (error) => {
+                alert(error.text)
+            });
+        }
+    };
     return (
         <div className="contact-body">
-            <PageIntro
-                    pageName={'Contact Me'}
-                    displayIndex={'| 04'}
-                    displayText={['Want more?', 'I hope LinkedIn, Instagram and my resume is enough...']}
-                ></PageIntro>
-                <div className="socials-container">
-                <div className="socials-display">
-                    <a className="instagram-container" href="https://www.instagram.com/sarinajnli/?next=%2F">
-                        <img src={Instagram} alt='' className='ig'></img>
-                        <div className="ig-handle">@sarinajnli</div>
-                        <div className="ig-label">Instagram</div>
-                    </a>
-                    <a className="resume-container" href={Resume} target='_blank' alt='' rel="noreferrer">
-                        <img src={ResumeIMG} alt='' className='resume'></img>
-                        <div className="ig-handle">View PDF</div>
-                        <div className="ig-label">Resume</div>
-                    </a>
-                    <div className="linkedin-container">
-                    <img src={LinkedIn} alt='' className='linkedin'></img>
-                        <div className="linkedin-handle">@sarinali</div>
-                        <div className="linkedin-label">Linkedin</div>
-                    </div>
+            <div className='sarina-title'>Contact Me</div>
+            <div className='message-prompt'>Hello! Please leave me a message here and I will get in touch with you shortly!</div>
 
-                </div>
-                </div>
+            <Parallax speed={width > 760? -10 :0}>
+
+                <form ref={form} onSubmit={sendEmail} className='contact-form'>
+            
+                    <div className='input-prompt'>Name</div>
+                    <input id='boxone' type="text" name="user_name" className={`name-text-${Mode.curMode}`} 
+                        value={name}
+                        placeholder="Your name"
+                        onInput={
+                            e => {
+                                setName(e.target.value)
+                            }
+                        }
+                    />
+                    <div className='input-prompt'>Email</div>
+                    <input type="email" name="user_email" className={`email-text-${Mode.curMode}`} id='box2'
+                        value={email}
+                        placeholder="youremail@email.com"
+                        onInput={
+                            e => {
+                                setEmail(e.target.value)
+                            }
+                        }
+                    />
+                    <div className='input-prompt'>Message</div>
+                    <textarea name="message" className={`message-text-${Mode.curMode}`} id='box3'
+                        value={message}
+                        placeholder="Sarina, you are so hot and cool!"
+                        onInput={
+                            e => {
+                                setMessage(e.target.value)
+                            }
+                        }
+                    />
+                    <input type="submit" value="Send" className='submit-btn'/>
+                </form>
+            </Parallax>
         </div>
     )
 }

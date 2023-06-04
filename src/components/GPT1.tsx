@@ -38,7 +38,8 @@ export default function GPT1(props) {
     const [question, setQuestion] = useState(props?.value ?? '');
     const [answer, setAnswer] = useState('');
     const [submittedQuestion, setSubmittedQuestion] = useState('');
-    
+    // console.log(Mode.curMode)
+
     chat.callbacks = [
         {
             handleLLMNewToken(token: string) {
