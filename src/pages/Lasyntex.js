@@ -4,7 +4,7 @@ import GCloud from "../assets/projects_assets/technologies/gcloud.png"
 import MYSQL from "../assets/projects_assets/technologies/mysql.png"
 import NodeJS from "../assets/projects_assets/technologies/nodejs.png"
 import ReactJS from "../assets/projects_assets/technologies/reactjs.png"
-import Display from "../assets/projects_assets/lasyntex/img.png"
+import Display from "../assets/projects_assets/lasyntex/display.png"
 import Architecture from "../assets/projects_assets/lasyntex/ss.png"
 import Postman from "../assets/projects_assets/lasyntex/postman.png"
 import GSQL from "../assets/projects_assets/lasyntex/sql.png"
@@ -12,6 +12,7 @@ import Search from "../assets/projects_assets/lasyntex/search.png"
 import Swagger from "../assets/projects_assets/lasyntex/swagger.png"
 import Favicon from "../assets/projects_assets/lasyntex/Lasyntex.jpg"
 import Logo from "../assets/projects_assets/lasyntex/lasyntex.png"
+import Heroku from "../assets/projects_assets/lasyntex/heroku.png"
 
 export default function Lasyntex() {
   return (
@@ -29,6 +30,18 @@ export default function Lasyntex() {
       </div>
       <div className='trails-tagline'>
       “Your quick pocket guide to LaTeX commands! Search and find the command that you need fully fitted with examples, descriptions and more. Try Lasyntex, a web app writing proofs since 2023!”
+      </div>
+      <div className='trails-b'>UPDATE JUNE 2023</div>
+      <div className='trails-p'>Dorian and I have revamped our backend for indefinite uptime without the reliance on free credits for hosting! How did we do this? Hosting on Heroku with ClearDB MySQL database.</div>
+      <div className='trails-prev-imgs'>
+        <img src={Heroku} alt='' className='img-indiv-f'></img>
+      </div>
+      <div className='trails-p'>
+        Ignore the 17 critical errors, those are from testing for deployment! The logic is basically the same, we use express with NodeJS to write the server side backend code for POST, PATCH, DELETE and GET. 
+        The only difference this time is that we use a different endpoint, had to deal with middleware (in our case we used CORS on the backend to prevent HTTP header errors) and instead of using a hook to store the \allcommands fetch HTTP request, we statically fetched the data on load to prevent too many requests. (We ran into 503 quota reached error TOO MANY TIMES to count!)
+      </div>
+      <div className='trails-b'>
+        JANUARY 2023
       </div>
       <div className='trails-p'>
       Lasyntex is a back end focused REST API web application to quickly search up Latex commands for reference. I must admit, this web app is very useful for my computer science classes and my discrete maths classes. It is a quick reference search to help me write my proofs faster. 
