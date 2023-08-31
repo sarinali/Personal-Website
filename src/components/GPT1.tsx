@@ -13,7 +13,7 @@ import Mode from '../Mode'
 import Constants from "../Constants"
 import Banner from './Banner.js';
 
-let generating = false;
+// let generating = false;
 const chat = new ChatOpenAI({ 
     openAIApiKey: process.env.REACT_APP_OPENAI_API_KEY,
       temperature: 0.9, 
@@ -38,6 +38,7 @@ export default function GPT1(props) {
     const [question, setQuestion] = useState(props?.value ?? '');
     const [answer, setAnswer] = useState('');
     const [submittedQuestion, setSubmittedQuestion] = useState('');
+    const [generating, setGenerating] = useState(false)
     // console.log(Mode.curMode)
 
     chat.callbacks = [
@@ -67,12 +68,11 @@ export default function GPT1(props) {
                     setSubmittedQuestion(question)
                     setQuestion('')
                     setAnswer('')
-                    generating = true
                     console.log(generating)
                     await chain.call({
                         input: question
                     })
-                    generating = false
+                    setGenerating(false)
                 }
                 
             }}>
@@ -81,11 +81,12 @@ export default function GPT1(props) {
                     placeholder='Ask a question about Sarina!'
                     id = "askbar"
                     value={question} 
+                    disabled={generating}
                     // onChange={() => console.log(e)}
                     onInput={e => {
                         setQuestion((e.target as HTMLInputElement).value)
                     }}/>
-                <input type="submit" value="Submit" className='submit-btn'/> 
+                <input type="submit"  className='submit-btn'/> 
             </form>
             </div>
         </div>
