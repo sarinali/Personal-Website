@@ -9,27 +9,24 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs"
 import Collapsible from 'react-collapsible';
 import { AiOutlineArrowDown } from "react-icons/ai"
 import { Link } from "react-router-dom"
-import ProjectBundle from '../components/ProjectBundle';
-import Reactjs from "../assets/projects_assets/technologies/reactjs.png"
-import Flutter from '../assets/projects_assets/technologies/flutter.png';
+import ProjectBundle from '../classes/ProjectBundle';
 import Boink from "../assets/projects_assets/boink.png"
 import KiwiiMenu from "../assets/projects_assets/kiwiimenu.png"
 import BattleShip from "../assets/projects_assets/battleship.png"
 import UFound from "../assets/projects_assets/ufound.png"
 import MazeRunner from "../assets/projects_assets/mazerunner.png"
-import Unity from "../assets/projects_assets/technologies/unity.png"
 import ProjectButton from '../components/ProjectButton';
 import OtherProject from '../components/OtherProject';
 import Firebase from '../assets/projects_assets/technologies/firebase.png'
-import Python from '../assets/projects_assets/technologies/python.png'
-import Java from '../assets/projects_assets/technologies/java.png';
+import UniGPT from "../assets/projects_assets/unigpt/unigpt.png"
+import TechnologyBanners from '../classes/TechnologyBanners';
 
 const otherProjects = [
     new ProjectBundle(
         "Bo!nk",
         Boink,
         "Jan 2021 - May 2021",
-        [Unity],
+        [TechnologyBanners.unity, TechnologyBanners.csharp, TechnologyBanners.html, TechnologyBanners.css],
         "Bo!nk, is a drawing-based puzzle game that challenges the player to draw lines and direct balls into holes. It features a cartoonish art style, multiple levels, sound effects and many other mechanics. It was made in Unity and released on App Store for download.",
         [
             new ProjectButton(
@@ -47,7 +44,7 @@ const otherProjects = [
         "Kiwii Menu",
         KiwiiMenu,
         "May 2022 - Jan 2023",
-        [Reactjs, Flutter, Firebase],
+        [TechnologyBanners.reactjs, TechnologyBanners.flutter, Firebase],
         "Kiwii Menu is a small startup aiming to create virtual menus for restuarants in Markham.",
         [
             new ProjectButton(
@@ -60,7 +57,7 @@ const otherProjects = [
         "Battleship",
         BattleShip,
         "Dec 2022",
-        [Java],
+        [TechnologyBanners.java],
         "Coded using native Java, it includes fully functional Ai opponent, player vs Ai Mode (Hard and Easy!), graphical user interface, terminal based game, music and SFX and file saving, reload past saved games. Made for my ICS4U class, I created it with my partners, Vivien Cai and Jiaan Li.",
         [
             new ProjectButton(
@@ -73,7 +70,7 @@ const otherProjects = [
         "UFound",
         UFound,
         "Nov 2022",
-        [Reactjs, Firebase],
+        [TechnologyBanners.reactjs, Firebase],
         "Ever notice Robarts commons filled with lost goods left neglected? Ever leave your items somewhere on campus and can't seem to find a central place to look for where they might have been left by others? With the busy lives of students around campus, we made a web app for the students of UofT to post listings of found lost goods. Students can securely log in using their UTORID and interact with listings to claim their lost goods.",
         [
             new ProjectButton(
@@ -90,7 +87,7 @@ const otherProjects = [
         "Maze Runner",
         MazeRunner,
         "March 2023",
-        [Python],
+        [TechnologyBanners.python],
         "My final project made with my groupmates for UofT CSC111 class, we created a program to generate and solve large mazes! With a focus on graph theory and graph theory algorithms, we used DFS to generate a randomized maze with a guaranteed answer and used BFS to compute the shortest answer to the maze. Made natively in Python, we used PyGame for user interaction and cool computations!",
         [
             new ProjectButton(
@@ -112,9 +109,19 @@ function Projects() {
 
     return (
         <div className="project-body">
-            <div className="feature-title">Featured</div>
+            <div className="feature-title-1">Featured</div>
             <Parallax speed={width > 760 ? -10 : 0}>
-                <div className="featured-projects">
+            <div className='featured-projects'>
+            <div className="feature-container">
+                        <img src={UniGPT} alt="" className="feature-image"></img>
+                        <div className="feature-item">
+                            <div>UniGPT</div>
+                            <Link to="/projects/unigpt" className='link-feature'>
+                                <BsFillArrowRightCircleFill className='feature-icon'></BsFillArrowRightCircleFill>
+
+                            </Link>
+                        </div>
+                    </div>
                     <div className="feature-container">
                         <img src={Trails} alt="" className="feature-image"></img>
                         <div className="feature-item">
@@ -135,6 +142,10 @@ function Projects() {
                             </Link>
                         </div>
                     </div>
+            </div>
+                <div className="featured-projects">
+                    
+                    
                     <div className="feature-container">
                         <img src={Lasyntex} alt="" className="feature-image"></img>
                         <div className="feature-item">

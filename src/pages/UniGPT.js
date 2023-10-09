@@ -1,6 +1,10 @@
 import React from 'react'
 import "../css/trails.css"
-import Display from "../assets/projects_assets/lasyntex/display.png"
+import GCloud from "../assets/projects_assets/technologies/gcloud.png"
+import MYSQL from "../assets/projects_assets/technologies/mysql.png"
+import NodeJS from "../assets/projects_assets/technologies/nodejs.png"
+import ReactJS from "../assets/projects_assets/technologies/reactjs.png"
+import Display from "../assets/projects_assets/unigpt/unigpt2.png"
 import Architecture from "../assets/projects_assets/lasyntex/ss.png"
 import Postman from "../assets/projects_assets/lasyntex/postman.png"
 import GSQL from "../assets/projects_assets/lasyntex/sql.png"
@@ -9,18 +13,17 @@ import Swagger from "../assets/projects_assets/lasyntex/swagger.png"
 import Favicon from "../assets/projects_assets/lasyntex/Lasyntex.jpg"
 import Logo from "../assets/projects_assets/lasyntex/lasyntex.png"
 import Heroku from "../assets/projects_assets/lasyntex/heroku.png"
-import TechnologyBanners from '../classes/TechnologyBanners'
 
-export default function Lasyntex() {
+const markdown = `![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)`
+
+
+export default function UniGPT() {
   return (
     <div className='trails-body'>
-      <div className='trails-title'>Lasyntex</div>
+      <div className='trails-title'>UniGPT</div>
       <div className='trails-date'>Jan 2023</div>
       <div className='trails-tech'>
-        <img className='trails-tech-individ' src={TechnologyBanners.reactjs} alt=""></img>
-        <img className='trails-tech-individ' src={TechnologyBanners.nodejs} alt=""></img>
-        <img className='trails-tech-individ' src={TechnologyBanners.mysql} alt=""></img>
-        <img className='trails-tech-individ' src={TechnologyBanners.gcp} alt=""></img>
+      <img src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white' alt=''></img>
       </div>
       <div className='trails-prev-imgs'>
         <img src={Display} alt="" className='img-indiv-f'></img>

@@ -3,8 +3,6 @@ import "../css/trails.css"
 import Img1 from "../assets/projects_assets/markhamtrails/1.png"
 import Img2 from "../assets/projects_assets/markhamtrails/2.png"
 import Img3 from "../assets/projects_assets/markhamtrails/3.png"
-import Flutter from "../assets/projects_assets/technologies/flutter.png"
-import Gmap from "../assets/projects_assets/technologies/gmap.png"
 import AppPage from "../assets/projects_assets/markhamtrails/app_page.png"
 import ModalView from "../assets/projects_assets/markhamtrails/modalview.jpg"
 import Logo1 from "../assets/projects_assets/markhamtrails/logo.png"
@@ -12,6 +10,7 @@ import Logo2 from "../assets/projects_assets/markhamtrails/newlogo.png"
 import SS1 from "../assets/projects_assets/markhamtrails/IMG_2279.PNG"
 import SS2 from "../assets/projects_assets/markhamtrails/IMG_2280.PNG"
 import SS3 from "../assets/projects_assets/markhamtrails/IMG_2281.PNG"
+import TechnologyBanners from '../classes/TechnologyBanners'
 
 
 
@@ -21,8 +20,8 @@ export default function MarkhamTrails() {
       <div className='trails-title'>Markham Trails</div>
       <div className='trails-date'>March 2022 - Present</div>
       <div className='trails-tech'>
-        <img className='trails-tech-individ' src={Flutter} alt=""></img>
-        <img className='trails-tech-individ' src={Gmap} alt=""></img>
+        <img className='trails-tech-individ' src={TechnologyBanners.flutter} alt=""></img>
+        <img className='trails-tech-individ' src={TechnologyBanners.gcp} alt=""></img>
       </div>
       <div className='trails-prev-imgs'>
         <img src={Img1} alt="" className='img-indiv'></img>

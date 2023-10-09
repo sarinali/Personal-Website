@@ -12,6 +12,7 @@ import S2 from "../assets/projects_assets/wolfpackapp/mockuplinks.png"
 import Logo from "../assets/projects_assets/wolfpackapp/image.png"
 import FeatureGraphic from "../assets/projects_assets/wolfpackapp/featured_graphic.png"
 import Video from "../assets/projects_assets/wolfpackapp/promo.mp4"
+import TechnologyBanners from '../classes/TechnologyBanners'
 
 export default function Wolfpackapp() {
   return (
@@ -19,7 +20,9 @@ export default function Wolfpackapp() {
       <div className='trails-title'>wolfpackapp</div>
       <div className='trails-date'>Jun 2021 - Dec 2021</div>
       <div className='trails-tech'>
-        <img className='trails-tech-individ' src={Flutter} alt=""></img>
+        <img className='trails-tech-individ' src={TechnologyBanners.flutter} alt=""></img>
+        <img className='trails-tech-individ' src={TechnologyBanners.xcode} alt=""></img>
+        <img className='trails-tech-individ' src={TechnologyBanners.android_studio} alt=""></img>
         <img className='trails-tech-individ' src={Firebase} alt=""></img>
       </div>
       <div className='trails-prev-imgs'>
