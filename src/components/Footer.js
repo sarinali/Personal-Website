@@ -32,7 +32,7 @@ function Footer() {
         <hr className="footer-line"></hr>
       </div>
       <div className="footer-div3">
-        <div className="footer-marker">2022 Sarina Li</div>
+        <div className="footer-marker">2024 Sarina Li</div>
         <div className="footer-icons">
             <div className="footer-icon-container">
                 <AiFillGithub className="footer-github" 
