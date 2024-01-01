@@ -81,7 +81,7 @@ function ContactMe() {
                     <div className='input-prompt'>Message</div>
                     <textarea name="message" className={`message-text-${Mode.curMode}`} id='box3'
                         value={message}
-                        placeholder="Sarina, you are so hot and cool!"
+                        placeholder="Type your message here"
                         onInput={
                             e => {
                                 setMessage(e.target.value)

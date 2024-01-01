@@ -42,7 +42,9 @@ function TopBarDesktop() {
         var maxScrollBreakpoint = 200;
         var newOpacity = window.scrollY / maxScrollBreakpoint;
         newOpacity = Math.max(minOpacity, 1-newOpacity);
-        document.getElementById("topbar").style.opacity = newOpacity;
+        if (document.getElementById("topbar") != null) {
+            document.getElementById("topbar").style.opacity = newOpacity;
+        }
     }
 
     function changeBackground(e) {
@@ -56,10 +58,10 @@ function TopBarDesktop() {
         onMouseEnter={changeBackground}
         onMouseLeave={changeOpacity}
         >
-            <div className='logo-container'>
+            {/* <div className='logo-container'>
                 <div className='chinese-name'>李晶</div>
                 <div className='english-name'>sarina li</div>
-            </div>
+            </div> */}
             <div className='topbar'>
                 <div className='topbar-item-container'>
                     <Link to="/" className={`topbar-item-${Mode.curMode}`}>Home</Link>
@@ -67,9 +69,9 @@ function TopBarDesktop() {
                 <div className='topbar-item-container'>
                     <Link to="/projects" className={`topbar-item-${Mode.curMode}`}>Projects</Link>
                 </div>
-                <div className='topbar-item-container'>
+                {/* <div className='topbar-item-container'>
                     <Link to="/aboutme" className={`topbar-item-${Mode.curMode}`}>About Me</Link>
-                </div>
+                </div> */}
                 {/* <div className='topbar-item-container'>
                     <Link to="/experience" className="topbar-item">Experience</Link>
                 </div> */}

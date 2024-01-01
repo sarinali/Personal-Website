@@ -8,7 +8,7 @@
 .footer {
     height: 190px;
     width: 100%;
-
+    padding: 50px;
     background-color: #eb4034;
 }
 
@@ -51,7 +51,7 @@
 
 .footer-line {
     position: absolute;
-    width: 100%;
+    width: calc(100vw - 100px);
     border: 0.5px solid white;
 
 }

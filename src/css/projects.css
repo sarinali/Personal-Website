@@ -191,7 +191,7 @@
 .feature-title-1 {
     margin-top: 40px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 800;
     font-size: 48px;
     margin-bottom: 10px;
 }
@@ -290,6 +290,10 @@ a {
     /* width: 30px; */
     height: 30px;    /* height: auto; */
 }
+.project-title-card {
+    font-weight: 600;
+}
+
 
 @media (max-width: 760px) {
     .other-proj-img {

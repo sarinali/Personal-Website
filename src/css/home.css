@@ -347,6 +347,7 @@
 }
 
 .home-wrapper {
+    height: 100vh;
     display: flex;
     padding: 120px;
     padding-top: 150px;
@@ -403,6 +404,13 @@
 }
 
 .home-text-p1 {
+    font-weight: 500;
+    text-align: left;
+}
+
+.home-text-sub {
+    margin-top: 20px;
+    font-weight: 700;
     text-align: left;
 }
 

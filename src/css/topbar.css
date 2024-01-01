@@ -1,9 +1,10 @@
 .topbar-container-light {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     background-color: #F6F6F6;
     position: fixed;
     width: 90vw;
+    height: 10vh;
     opacity: 1;
     transition: 0.2s;
     border-radius: 16px;
@@ -17,10 +18,11 @@
 .topbar-container-dark {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     background-color: #222222;
     position: fixed;
     width: 90vw;
+    height: 10vh;
     opacity: 1;
     transition: 0.2s;
     border-radius: 16px;

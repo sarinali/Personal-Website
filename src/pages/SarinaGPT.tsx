@@ -11,7 +11,7 @@ class SarinaGPT extends React.Component {
             <div className="gpt-body">
                 <div>
                     <div className="sarina-title">SarinaGPT</div>
-                    <p className="gpt-description">SarinaGPT is a chatbot that answers questions about me! It is a LLM trained on data about myself, feel free to ask about my education, employment history, side projects, contact information and personal interests!</p>
+                    <p className="gpt-description">SarinaGPT is a chatbot that answers questions about me! It is a LLM trained on data about myself, feel free to ask about my education, employment history, side projects, contact information and personal interests! Note: Last Updated Aug 2023</p>
                     <GPT1></GPT1>
                 </div>
             </div>

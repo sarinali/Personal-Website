@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import TopBar from './components/TopBar';
 import Home from './pages/Home';
-// import Home1 from './pages/Home1';
 import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
@@ -16,6 +15,8 @@ import Wolfpackapp from './pages/Wolfpackapp';
 import Lasyntex from './pages/Lasyntex';
 import SarinaGPT from './pages/SarinaGPT.tsx';
 import UniGPT from './pages/UniGPT';
+import Callhub from './pages/Callhub';
+import ComputerSystems from './pages/ComputerSystems';
 
 
 
@@ -37,7 +38,8 @@ function App() {
             <Route exact path="/projects/lasyntex" element={<Lasyntex></Lasyntex>}></Route>
             <Route exact path='/projects/unigpt' element={<UniGPT></UniGPT>}></Route>
             <Route exact path='/sarinagpt' element={<SarinaGPT></SarinaGPT>}></Route>
-
+            <Route exact path='/projects/callhub' element={<Callhub></Callhub>}></Route>
+            <Route exact path='/projects/computersystems' element={<ComputerSystems></ComputerSystems>}></Route>
         </Routes> 
         <Footer></Footer>
       </div>

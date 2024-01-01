@@ -11,10 +11,10 @@ function Footer() {
     <div className="footer">
       <div className="footer-div1">
       <div className="footer-logo-wrapper">
-        <div className="footer-logo-container">
+        {/* <div className="footer-logo-container">
             <div >李晶</div>
             <div >sarina li</div>
-        </div>
+        </div> */}
 
       </div>
         <div className="footer-contact">

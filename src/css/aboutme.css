@@ -124,10 +124,12 @@
 }
 
 .home-intro-en {
+    user-select: none;
     display: flex;
     align-items: flex-start;
     justify-content: start;
     font-size: 260%;
+    font-weight: 700;
     text-align: left;
     line-height: 1.2;
 }
@@ -142,6 +144,9 @@
     
 }
 .home-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 50px;
     /* font-size: 3em; */
 }

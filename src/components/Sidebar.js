@@ -10,7 +10,7 @@ export default props => {
   return (
     <Menu right>
         <Link to='/' className='btn'>Home</Link>
-        <Link to='/aboutme' className='btn'>About Me</Link>
+        {/* <Link to='/aboutme' className='btn'>About Me</Link> */}
         {/* <Link to='/experience' className='btn'>Experience</Link> */}
         <Link to='/projects' className='btn'>Projects</Link>
         <Link to='/contact' className='btn'>Contact Me</Link>

@@ -78,7 +78,7 @@ export default function GPT1(props) {
             }}>
         
                 <input className={`ask-bar-${Mode.curMode}`}
-                    placeholder='Ask a question about Sarina!'
+                    placeholder="What is Sarina's relevant coursework?"
                     id = "askbar"
                     value={question} 
                     disabled={generating}
