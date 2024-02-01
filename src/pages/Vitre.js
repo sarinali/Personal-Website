@@ -22,7 +22,7 @@ export default function Vitre() {
         ></img>
       </div>
       <div className="trails-prev-imgs">
-        <img src={UoftHacks} alt="" className="img-indiv"></img>
+        <img src={UoftHacks} alt="" className="img-indiv-f"></img>
       </div>
       <div className="trails-tagline">
         “A charming VR experience that helps you recall your French skills by
