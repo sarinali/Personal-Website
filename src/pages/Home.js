@@ -34,15 +34,17 @@ function Home() {
           <div className="home-p1">
             <div className="home-text-p1">
               <br></br>I'm a Computer Science Specialist and Statistics Minor at the <a href='https://www.utoronto.ca/'>University of Toronto</a> with a focus in Computer Systems. 
-              {/* <ul>
+              <ul>
                 <li>
                 Incoming @ <a href='https://www.mozilla.org/en-US/'>Mozilla</a> working on <a href='https://www.mozilla.org/en-CA/firefox/new/'>Firefox</a>.
                 </li>
                 <li>
+                Currently on <a href='https://uoftblueprint.org/#/'>Uoft Blueprint</a> developing an app for <a href='https://www.centrefordreams.ca/'>Centre for Dreams</a>.
+                </li>
+                <li>
                 Previously @ Ontario Government, <a href='https://www.tarion.com/'>Tarion</a> (Home Warranty) developing full-stack.
                 </li>
-              </ul> */}
-              <br></br>
+              </ul>
               <br></br><div>I enjoy lifting and fitness in my free time :)</div>
             </div>
           </div>

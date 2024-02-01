@@ -21,6 +21,7 @@ import UniGPT from "../assets/projects_assets/unigpt/unigpt.png";
 import TechnologyBanners from "../classes/TechnologyBanners";
 import CSC258 from "../assets/projects_assets/csc258.png"
 import CallHub from "../assets/projects_assets/callhubconnect.png"
+import Vitre from "../assets/projects_assets/vitre/vitre.png"
 
 const otherProjects = [
   new ProjectBundle(
@@ -94,7 +95,7 @@ function Projects() {
 
   return (
     <div className="project-body">
-      <div className="feature-title-1">Featured</div>
+      {/* <div className="feature-title-1">Featured</div> */}
       <Parallax speed={width > 760 ? -10 : 0}>
         <div className="featured-projects">
           <div className="feature-container">
@@ -154,8 +155,20 @@ function Projects() {
             </div>
           </div>
         </div>
+        <div className="featured-projects">
+          <div className="feature-container">
+            <img src={Vitre} alt="" className="feature-image"></img>
+            <div className="feature-item">
+              <div className="project-title-card">Vitre</div>
+              <Link to="/projects/vitre" className="link-feature">
+                <BsFillArrowRightCircleFill className="feature-icon"></BsFillArrowRightCircleFill>
+              </Link>
+            </div>
+          </div>
+        </div>
       </Parallax>
-      <div className="feature-title">Other</div>
+      <div className="feature-title">More</div>
+      
       <div className="other-project-item">
         {otherProjects.map((project) => {
           return (

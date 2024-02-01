@@ -189,7 +189,7 @@
 }
 
 .feature-title-1 {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: left;
     font-weight: 800;
     font-size: 48px;
@@ -206,7 +206,7 @@
 .featured-projects {
     justify-content: left;
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .feature-image {

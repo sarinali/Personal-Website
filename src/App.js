@@ -17,6 +17,7 @@ import SarinaGPT from './pages/SarinaGPT.tsx';
 import UniGPT from './pages/UniGPT';
 import Callhub from './pages/Callhub';
 import ComputerSystems from './pages/ComputerSystems';
+import Vitre from './pages/Vitre';
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Route exact path='/sarinagpt' element={<SarinaGPT></SarinaGPT>}></Route>
             <Route exact path='/projects/callhub' element={<Callhub></Callhub>}></Route>
             <Route exact path='/projects/computersystems' element={<ComputerSystems></ComputerSystems>}></Route>
+            <Route exact path='/projects/vitre' element={<Vitre></Vitre>}></Route>
         </Routes> 
         <Footer></Footer>
       </div>
